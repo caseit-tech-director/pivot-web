@@ -82,7 +82,7 @@ module.exports = {
           // IBM Plex Mono: Regular, Medium, Bold
           `IBM Plex Mono\:400,500,700`,
           // IBM Plex Sans: Regluar, Regular Italic, Medium, Bold
-          `IBM Plex Sans\:400,400i, 500,700`,
+          `IBM Plex Sans\:400,400i,500,700`,
         ],
         display: "swap",
       },
