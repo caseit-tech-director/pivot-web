@@ -1,5 +1,6 @@
 body {
   font-family: "IBM Plex Sans";
+  color: var(--clr-primary-dark);
 }
 
 h1 {
@@ -8,4 +9,6 @@ h1 {
   font-weight: 500;
   line-height: 121.3%;
   letter-spacing: -.045em;
+
+  color: var(--clr-primary-light);
 }

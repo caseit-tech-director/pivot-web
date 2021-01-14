@@ -1,0 +1,30 @@
+.hero {
+
+  --top-margin: 30vh;
+  --bottom-margin: 30vh;
+  
+  // disable margin collapsing
+  display: flex;
+  flex-direction: column;
+
+  margin-bottom: var(--bottom-margin);;
+
+  &__heading {
+    font-size: clamp(36px, 9vw, 96px);
+    margin-top:var(--top-margin);
+    margin-bottom:1rem;
+    max-width: 80rem;
+  }
+
+  &__label, &__date {
+    font-size: clamp(18px, 3.8vw, 24px);
+  }
+
+  &__label {
+    font-weight: bold;
+  }
+  &__date {
+    font-weight: normal;
+  }
+
+}

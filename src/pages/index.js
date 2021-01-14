@@ -3,6 +3,8 @@ import { Helmet } from "react-helmet";
 
 import "../style/main.scss";
 
+import Hero from "../components/sections/Hero";
+
 // Calculating the important dates of pivot
 const PIVOT_DATES = {
   appsDeadline: "2021-01-22",
@@ -40,20 +42,9 @@ const HomePage = () => {
       </Helmet>
 
       {/* hero section */}
-      <header id="hero">
-        <h1>BC based BTM Case Competition built for future business leaders</h1>
-        <div>1 week virtual event</div>
-        <div>
-          {/* Javascript month starts from zero */}
-          {`${
-            PIVOT_BEGIN_DATE.getMonth() + 1
-          }/${PIVOT_BEGIN_DATE.getDate()} - ${
-            PIVOT_END_DATE.getMonth() + 1
-          }/${PIVOT_END_DATE.getDate()}`}
-        </div>
-      </header>
+      <Hero pivotBeginDate={PIVOT_BEGIN_DATE} pivotEndDate={PIVOT_END_DATE} />
 
-      <main>
+      <main className="full-width">
         <section id="about">
           <h2>About pivot</h2>
           <p>
@@ -208,7 +199,7 @@ const HomePage = () => {
         </section>
       </main>
 
-      <footer>
+      <footer className="full-width">
         {/* inser logo here */}
         brought to you by the dedicated team of pivot 2021
       </footer>
