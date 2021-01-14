@@ -8,6 +8,7 @@
     "@emotion/styled": "^10.0.27",
     "bulma": "^0.9.1",
     "codemirror": "^5.46.0",
+    "framer-motion": "^3.2.1",
     "gatsby": "^2.20.35",
     "gatsby-image": "^2.3.5",
     "gatsby-plugin-netlify": "^2.2.4",
