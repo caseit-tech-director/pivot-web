@@ -1,6 +1,8 @@
 import React from "react";
 import { Helmet } from "react-helmet";
 
+import "../style/main.scss";
+
 // Calculating the important dates of pivot
 const PIVOT_DATES = {
   appsDeadline: "2021-01-22",
