@@ -1,68 +1,65 @@
+@import "./breakpoints.scss";
+
 body {
   font-family: "IBM Plex Sans";
   color: var(--clr-text);
 }
 
-// Caution: the unit in this function must be PIXEL
-@function get-vw($target, $contextViewportWidth) { 
-  $vw-context: ($contextViewportWidth*.01) * 1px;
-  @return ($target/$vw-context) * 1vw;
-}
-
-$stopScalingAt: 1000; // in pixel 
-// Caution: the unit in this function must be PIXEL
-@mixin responsiveFontSize($min, $max) {
-  font-size: clamp($min, get-vw($max, $stopScalingAt), $max);
-}
-
 h1 {
   font-family: "IBM Plex Sans";
-  @include responsiveFontSize(36px, 96px);
+  font-size: responsiveSize(36px, 96px);
   font-weight: 500;
   line-height: 121.3%;
-  letter-spacing: -.045em;
+  letter-spacing: -0.045em;
 
   color: var(--clr-primary-light);
 }
 
 h2 {
   font-family: "IBM Plex Sans";
-  @include responsiveFontSize(32px, 48px);
+  // @include responsiveFontSize(32px, 48px);
+  font-size: responsiveSize(32px, 48px);
   font-weight: 700; // bold
   line-height: 124.8%;
-  letter-spacing: -.03em;
+  letter-spacing: -0.03em;
 }
 
 h3 {
   font-family: "IBM Plex Sans";
-  @include responsiveFontSize(24px, 32px);
+  font-size: responsiveSize(24px, 32px);
   font-weight: 700; // bold
   line-height: 124.8%;
-  letter-spacing: -.03em;
+  letter-spacing: -0.03em;
 }
 
 p {
   font-family: "IBM Plex Sans";
-  @include responsiveFontSize(16px, 24px);
+  font-size: responsiveSize(18px, 24px);
   max-width: 40ch;
 }
 
 .label {
   font-family: "IBM Plex Mono";
-  @include responsiveFontSize(12px, 18px);
+  font-size: responsiveSize(12px, 18px);
   font-weight: 500; // medium
-  letter-spacing: .07em;
-  
+  letter-spacing: 0.07em;
+
   text-transform: uppercase;
 }
 .button-text {
   @extend .label;
   font-size: 14px;
 }
-.centered-text > *, .centered-text {
+.quote {
+  @extend p;
+  font-style: oblique;
+  font-size: responsiveSize(24px, 32px);
+}
+
+.centered-text > *,
+.centered-text {
   // make everything inside the centered text style center
   margin-left: auto;
   margin-right: auto;
   text-align: center;
 }
-
