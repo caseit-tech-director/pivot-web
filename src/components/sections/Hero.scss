@@ -1,7 +1,7 @@
 .hero {
   --blurb-top-margin: 30vh;
   --bottom-margin: 30vh;
-  
+
   // disable margin collapsing
   display: flex;
   flex-direction: column;
@@ -10,12 +10,13 @@
 
   &__heading {
     font-size: clamp(36px, 9vw, 96px);
-    margin-top:var(--blurb-top-margin);
-    margin-bottom:1rem;
+    margin-top: var(--blurb-top-margin);
+    margin-bottom: 1rem;
     max-width: 80rem;
   }
 
-  &__label, &__date {
+  &__label,
+  &__date {
     font-size: clamp(18px, 3.8vw, 24px);
   }
 
@@ -25,7 +26,6 @@
   &__date {
     font-weight: normal;
   }
-
 }
 
 /**
@@ -33,7 +33,6 @@
  */
 
 .hero-cta {
-
   display: flex;
   flex-direction: row;
 
@@ -47,6 +46,7 @@
   }
 
   &__cta-text {
+    margin: 0rem; // reset the margin from the default layout
     margin-right: 1rem;
     font-size: 14px;
   }

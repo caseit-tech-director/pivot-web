@@ -10,7 +10,7 @@
   position: relative;
 
   max-width: 100em;
-  
+
   // margin-left: 1rem;
   // margin-right: 1rem;
   margin-left: 20px;
@@ -19,5 +19,105 @@
   @include viewportLargerThan(100em) {
     margin-left: auto;
     margin-right: auto;
+  }
+}
+
+/**
+ * 
+ * 
+ * Vertical rhythm/spacing
+ * 
+ * 
+ */
+
+$spacing-s: 1rem;
+$spacing-m: 2rem;
+$spacing-l: 8rem;
+$spacing-xl: 12rem;
+$spacing-xl--scaling: 30vh;
+
+h1,
+h2,
+h3,
+h4 {
+  margin-bottom: $spacing-s;
+}
+p {
+  margin-bottom: $spacing-m;
+}
+
+section {
+  margin-bottom: $spacing-xl;
+}
+
+.section-break {
+  margin-bottom: $spacing-xl--scaling;
+}
+
+/**
+ * 
+ * 
+ * Grid layout
+ * 
+ * 
+ */
+
+// change the grid behaviour on breakpoint s
+$grid-breakpoint: $breakpoint-s;
+
+.main-grid {
+  display: grid;
+
+  // smaller column gap on mobile
+  column-gap: 12px;
+  grid-template-columns: 1;
+  @include viewportLargerThan($grid-breakpoint) {
+    column-gap: 20px;
+    grid-template-columns: repeat(12, 1fr);
+  }
+
+  // layout format that are agnostic to the layout content
+  &__primary-col {
+    @include viewportLargerThan($grid-breakpoint) {
+      grid-column: 1/6;
+    }
+  }
+
+  &__secondary-col {
+    @include viewportLargerThan($grid-breakpoint) {
+      grid-column: 8/13;
+    }
+  }
+
+  &__full-col {
+    @include viewportLargerThan($grid-breakpoint) {
+      grid-column: 1/13;
+    }
+  }
+
+  &__middle-col {
+    @include viewportLargerThan($grid-breakpoint) {
+      grid-column: 7/13;
+    }
+  }
+
+  &__row-break {
+    // https://www.coryetzkorn.com/blog/dont-fear-empty-divs/
+    grid-column: 1/-1;
+  }
+
+  // format that are more dependent on the layout content
+  &__image {
+    width: 100vw;
+
+    margin-top: $spacing-m;
+    margin-bottom: $spacing-m;
+
+    @include viewportLargerThan($grid-breakpoint) {
+      grid-column: 1/10;
+      width: 100%;
+      max-height: 25rem;
+      object-fit: cover;
+    }
   }
 }

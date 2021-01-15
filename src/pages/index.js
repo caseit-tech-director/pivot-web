@@ -52,8 +52,8 @@ const HomePage = () => {
       />
 
       <main className="full-width">
-        <section id="about" className="centered-text">
-          <h2>About pivot</h2>
+        <section id="about" className="centered-text section-break">
+          <h2>About Pivot</h2>
           <p>
             Local rendition of CaseIT, the world’s premier MIS business case
             competition. Since 2017, PIVOT has welcomed over 300 competitors
@@ -61,27 +61,38 @@ const HomePage = () => {
             this rigorous and engaging competition.
           </p>
         </section>
+
         <section id="whyPivot">
-          <h2 className="centered-text">Are you ready for Pivot 2021</h2>
+          <h2 className="centered-text section-break">
+            Are you ready for Pivot 2021
+          </h2>
           {/* Reason 1 */}
-          <div className="pivot-reason">
-            <h3>Take on challenges</h3>
-            <p>
+          <div className="pivot-reason main-grid">
+            <h3 class="main-grid__primary-col">Take on challenges</h3>
+            <p class="main-grid__primary-col">
               Test your abilities to further your problem-solving skills and
               compete against a pool of qualified teams.
             </p>
-            <p>
+            <div className="main-grid__row-break"></div>
+            <p className="main-grid__secondary-col">
               <strong>Work collaboratively</strong> to{" "}
               <strong>solve a real-life business problem</strong> and further
               your understanding of the rapidly-growing BTM industry
             </p>
-            <p className="quote">
-              “I came back to pivot in 2020 mainly because I also competed in
-              2019, and it was an amazing experience. I also was hoping to test
-              out the BTM knowledge I had gained in my MIS concentration in the
-              last term.”
-            </p>
-            <div>John Doe - 2019</div>
+            <img
+              src="img/competition-challenge.jpg"
+              alt="4 student presenting in a case competition"
+              className="main-grid__image"
+            />
+            <div className="main-grid__middle-col">
+              <p className="quote">
+                “I came back to pivot in 2020 mainly because I also competed in
+                2019, and it was an amazing experience. I also was hoping to
+                test out the BTM knowledge I had gained in my MIS concentration
+                in the last term.”
+              </p>
+              <div className="label">John Doe - 2019</div>
+            </div>
           </div>
           {/* Reason 2 */}
           <div className="pivot-reason">
@@ -187,7 +198,10 @@ const HomePage = () => {
         <section id="team">
           <h2>Team up and buckle up! </h2>
           <div>Deadline in 11 Days! (1/22)</div>
-          <a href="https://www.facebook.com/groups/2959308947727798">
+          <a
+            href="https://www.facebook.com/groups/2959308947727798"
+            target="blank"
+          >
             Find my Team
           </a>
         </section>
@@ -199,8 +213,16 @@ const HomePage = () => {
         <section id="contact">
           <h2>Not getting your answer?</h2>
           <div>pivot_btm@sfu.ca</div>
-          <a href="https://www.facebook.com/PIVOTCaseCompetition">facebook</a>
-          <a href="https://www.instagram.com/pivotcasecompetition/">
+          <a
+            href="https://www.facebook.com/PIVOTCaseCompetition"
+            target="blank"
+          >
+            facebook
+          </a>
+          <a
+            href="https://www.instagram.com/pivotcasecompetition/"
+            target="blank"
+          >
             instagram
           </a>
         </section>
