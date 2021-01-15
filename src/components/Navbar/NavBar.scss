@@ -1,0 +1,15 @@
+.NavbarItems{
+    margin-top: 30vh;
+    // --bottom-margin: 30vh;
+    background: var(--clr-primary-light);
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+}
+
+.navbar-logo{
+    margin-right: auto; // push it to the left
+    height: 32px;
+}
