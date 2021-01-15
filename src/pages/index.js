@@ -11,6 +11,7 @@ import TeamSection from "../components/sections/team";
 import FaqSection from "../components/sections/faq";
 import ContactSection from "../components/sections/contact";
 import Footer from "../components/sections/footer";
+import NavBar from "../components/Navbar";
 
 const PIVOT_APPS_LINK = "https://www.surveymonkey.ca/r/pivot2021";
 
@@ -49,6 +50,9 @@ const HomePage = () => {
         <title>Pivot BTM Case Competition</title>
         {/* <link rel="canonical" href="http://mysite.com/example" /> */}
       </Helmet>
+
+      {/* navigation */}
+      <NavBar />
 
       {/* hero section */}
       <Hero
