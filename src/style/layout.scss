@@ -91,13 +91,13 @@ $grid-breakpoint: $breakpoint-s;
 
   &__full-col {
     @include viewportLargerThan($grid-breakpoint) {
-      grid-column: 1/13;
+      grid-column: 1/-1;
     }
   }
 
   &__middle-col {
     @include viewportLargerThan($grid-breakpoint) {
-      grid-column: 7/13;
+      grid-column: 7/-1;
     }
   }
 
@@ -119,5 +119,9 @@ $grid-breakpoint: $breakpoint-s;
       max-height: 25rem;
       object-fit: cover;
     }
+  }
+
+  &__image--full {
+    width: 100%;
   }
 }

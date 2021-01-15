@@ -1,5 +1,8 @@
 import React, { Component } from "react";
 
+import "./why.scss";
+import AlumniDisplay from "../AlumniDisplay";
+
 class why extends Component {
   render() {
     return (
@@ -36,12 +39,17 @@ class why extends Component {
           </div>
         </div>
         {/* Reason 2 */}
-        <div className="pivot-reason">
-          <h3>Expand your network</h3>
-          <p>
+        <div className="pivot-reason main-grid">
+          <h3 className="main-grid__primary-col">Expand your network</h3>
+          <p className="main-grid__primary-col">
             Network with recruiters from top consulting firms, rapidly-growing
             startups, data-analytics companies and more.
           </p>
+          <img
+            src="img/network-opportunity.svg"
+            alt="networking opportunities"
+            className="main-grid__full-col main-grid__image--full"
+          />
         </div>
         {/* Reason 3 */}
         <div className="pivot-reason">
@@ -51,32 +59,7 @@ class why extends Component {
             have been in your shoes
           </p>
 
-          {/* Sfu alumni */}
-          {[
-            {
-              name: "John Doe",
-              position: "consultant, SAP",
-              image: "https://source.unsplash.com/random/800x600",
-            },
-            {
-              name: "John Doe",
-              position: "consultant, SAP",
-              image: "https://source.unsplash.com/random/800x600",
-            },
-            {
-              name: "John Doe",
-              position: "consultant, SAP",
-              image: "https://source.unsplash.com/random/800x600",
-            },
-          ].forEach((val) => {
-            return (
-              <div>
-                <img src={val.image} alt={`image of ${val.name}`} />
-                <div>{val.name}</div>
-                <div>{val.position}</div>
-              </div>
-            );
-          })}
+          <AlumniDisplay />
           <p>
             In our <strong>Interactive Firside Chat sessions</strong>, Panel of
             SFU alumni from the MIS industry sharing their experiences and tips
