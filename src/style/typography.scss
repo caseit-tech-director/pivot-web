@@ -59,7 +59,7 @@ p {
   @extend .label;
   font-size: 14px;
 }
-.centered-text > * {
+.centered-text > *, .centered-text {
   // make everything inside the centered text style center
   margin-left: auto;
   margin-right: auto;

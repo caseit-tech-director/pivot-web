@@ -62,7 +62,7 @@ const HomePage = () => {
           </p>
         </section>
         <section id="whyPivot">
-          <h2>Are you ready for Pivot 2021</h2>
+          <h2 className="centered-text">Are you ready for Pivot 2021</h2>
           {/* Reason 1 */}
           <div className="pivot-reason">
             <h3>Take on challenges</h3>
