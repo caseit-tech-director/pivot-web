@@ -3,7 +3,7 @@ import { Helmet } from "react-helmet";
 
 import "../style/main.scss";
 
-import Hero from "../components/sections/hero";
+import HeroSection from "../components/sections/hero";
 import AboutSection from "../components/sections/about";
 import WhySection from "../components/sections/why";
 import ScheduleSection from "../components/sections/schedule";
@@ -55,7 +55,7 @@ const HomePage = () => {
       <NavBar />
 
       {/* hero section */}
-      <Hero
+      <HeroSection
         pivotBeginDate={PIVOT_BEGIN_DATE}
         pivotEndDate={PIVOT_END_DATE}
         daysLeft={daysToAppsDeadline}

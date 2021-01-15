@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 import "./Hero.scss";
 import { Link } from "gatsby";
 
-const Hero = ({ pivotBeginDate, pivotEndDate, daysLeft, applicationLink }) => (
+const hero = ({ pivotBeginDate, pivotEndDate, daysLeft, applicationLink }) => (
   <header id="hero" className="full-width hero">
     {/* top bar */}
     <div className="hero-cta">
@@ -34,9 +34,9 @@ const Hero = ({ pivotBeginDate, pivotEndDate, daysLeft, applicationLink }) => (
   </header>
 );
 
-Hero.propTypes = {
+hero.propTypes = {
   pivotBeginDate: PropTypes.object,
   pivotEndDate: PropTypes.object,
 };
 
-export default Hero;
+export default hero;
