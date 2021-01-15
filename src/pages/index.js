@@ -3,7 +3,7 @@ import { Helmet } from "react-helmet";
 
 import "../style/main.scss";
 
-import hero from "../components/sections/hero";
+import Hero from "../components/sections/hero";
 
 const PIVOT_APPS_LINK = "https://www.surveymonkey.ca/r/pivot2021";
 
@@ -44,7 +44,7 @@ const HomePage = () => {
       </Helmet>
 
       {/* hero section */}
-      <hero
+      <Hero
         pivotBeginDate={PIVOT_BEGIN_DATE}
         pivotEndDate={PIVOT_END_DATE}
         daysLeft={daysToAppsDeadline}
