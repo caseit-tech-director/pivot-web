@@ -1,17 +1,16 @@
 .hero {
-
-  --top-margin: 30vh;
+  --blurb-top-margin: 30vh;
   --bottom-margin: 30vh;
   
   // disable margin collapsing
   display: flex;
   flex-direction: column;
 
-  margin-bottom: var(--bottom-margin);;
+  margin-bottom: var(--bottom-margin);
 
   &__heading {
     font-size: clamp(36px, 9vw, 96px);
-    margin-top:var(--top-margin);
+    margin-top:var(--blurb-top-margin);
     margin-bottom:1rem;
     max-width: 80rem;
   }
@@ -27,4 +26,28 @@
     font-weight: normal;
   }
 
+}
+
+/**
+ * The top bar from the at landing cta
+ */
+
+.hero-cta {
+
+  display: flex;
+  flex-direction: row;
+
+  align-items: center;
+
+  margin-top: 2rem;
+
+  &__logo {
+    margin-right: auto; // push it to the left
+    height: 32px;
+  }
+
+  &__cta-text {
+    margin-right: 1rem;
+    font-size: 14px;
+  }
 }

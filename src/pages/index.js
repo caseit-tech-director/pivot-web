@@ -5,6 +5,8 @@ import "../style/main.scss";
 
 import Hero from "../components/sections/Hero";
 
+const PIVOT_APPS_LINK = "https://www.surveymonkey.ca/r/pivot2021";
+
 // Calculating the important dates of pivot
 const PIVOT_DATES = {
   appsDeadline: "2021-01-22",
@@ -42,10 +44,15 @@ const HomePage = () => {
       </Helmet>
 
       {/* hero section */}
-      <Hero pivotBeginDate={PIVOT_BEGIN_DATE} pivotEndDate={PIVOT_END_DATE} />
+      <Hero
+        pivotBeginDate={PIVOT_BEGIN_DATE}
+        pivotEndDate={PIVOT_END_DATE}
+        daysLeft={daysToAppsDeadline}
+        applicationLink={PIVOT_APPS_LINK}
+      />
 
       <main className="full-width">
-        <section id="about">
+        <section id="about" className="centered-text">
           <h2>About pivot</h2>
           <p>
             Local rendition of CaseIT, the world’s premier MIS business case
