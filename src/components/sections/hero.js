@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-import "./Hero.scss";
+import "./hero.scss";
 import { Link } from "gatsby";
 
 const hero = ({ pivotBeginDate, pivotEndDate, daysLeft, applicationLink }) => (
