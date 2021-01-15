@@ -1,5 +1,8 @@
+@import "./typography.scss";
 
 a {
+  @extend .button-text;
+
   display: inline-block;
 
   color: var(--clr-text--inverted);

@@ -55,7 +55,10 @@ p {
   
   text-transform: uppercase;
 }
-
+.button-text {
+  @extend .label;
+  font-size: 14px;
+}
 .centered-text > * {
   // make everything inside the centered text style center
   margin-left: auto;
