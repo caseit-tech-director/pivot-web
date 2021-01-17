@@ -1,0 +1,68 @@
+@import "../../style/breakpoints.scss";
+
+$schedule-table-breakpoint: $breakpoint-s;
+$border-color: rgba(1, 43, 105, 0.2);
+$border-style: 2px solid $border-color;
+
+$margin-spacing: 2em;
+$day-spacing: 2em;
+
+.schedule-table {
+  margin-top: $margin-spacing;
+  margin-bottom: $margin-spacing;
+
+  // adjust the sizing
+  font-size: responsiveSize(16px, 24px);
+
+  &__day {
+    display: flex;
+    flex-direction: column;
+
+    @include viewportLargerThan($schedule-table-breakpoint) {
+      flex-direction: row;
+      // container
+      border-top: $border-style;
+    }
+    margin-bottom: $day-spacing;
+  }
+
+  &__week {
+    font-size: responsiveSize(18px, 36px);
+    @include viewportLargerThan($schedule-table-breakpoint) {
+      border-top: 2px solid $border-color;
+    }
+    text-align: center;
+    padding-top: $day-spacing;
+    padding-bottom: $day-spacing;
+  }
+
+  &__date-info {
+    flex-basis: 4rem;
+    flex-grow: 1;
+    flex-shrink: 1;
+
+    @include viewportSmallerThan($schedule-table-breakpoint) {
+      // container
+      border-bottom: 2px solid $border-color;
+    }
+  }
+
+  // under date info
+  &__day-name {
+    @include viewportLargerThan($schedule-table-breakpoint) {
+      font-size: responsiveSize(24px, 48px);
+    }
+    font-size: 24px;
+  }
+  // under date info
+  &__day-date {
+    font-size: 24px;
+  }
+
+  &__events {
+    @include viewportLargerThan($schedule-table-breakpoint) {
+      flex-basis: 10rem;
+    }
+    flex-grow: 2;
+  }
+}

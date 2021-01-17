@@ -1,0 +1,25 @@
+@import "../../style/typography.scss";
+@import "../../style/breakpoints.scss";
+
+$gap: 2rem;
+
+.event-item {
+  display: flex;
+  flex-direction: row;
+
+  // align the content
+  align-items: baseline;
+
+  // the time of the event
+  &__time {
+    @extend .label;
+    opacity: 0.5;
+    margin-right: $gap;
+  }
+  // the name label of the event
+  &__name {
+    font-family: Roboto;
+    font-size: responsiveSize(14px, 24px);
+    line-height: 1.324em;
+  }
+}

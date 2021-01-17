@@ -90,7 +90,7 @@ $grid-breakpoint: $breakpoint-s;
 
   &__secondary-col {
     @include viewportLargerThan($grid-breakpoint) {
-      grid-column: 8/13;
+      grid-column: 8/-1;
     }
   }
 
@@ -103,6 +103,12 @@ $grid-breakpoint: $breakpoint-s;
   &__middle-col {
     @include viewportLargerThan($grid-breakpoint) {
       grid-column: 7/-1;
+    }
+  }
+
+  &__shifted-col {
+    @include viewportLargerThan($grid-breakpoint) {
+      grid-column: 4/-1;
     }
   }
 

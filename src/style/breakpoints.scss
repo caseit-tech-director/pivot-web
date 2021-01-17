@@ -31,6 +31,12 @@ $stopScalingAt: strip-unit($breakpoint-l); // in pixel
   }
 }
 
+@mixin viewportSmallerThan($screen) {
+  @media only screen and (max-width: $screen) {
+    @content;
+  }
+}
+
 @mixin viewportTallerThan($screenHeight) {
   @media only screen and (min-height: $screenHeight) {
     @content;
