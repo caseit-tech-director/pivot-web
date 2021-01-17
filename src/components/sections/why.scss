@@ -1,6 +1,61 @@
 @import "../../style/layout.scss";
+@import "../../style/variables.scss";
+@import "../../style/typography.scss";
+@import "../../style/breakpoints.scss";
 
 .pivot-reason {
   margin-top: $spacing-xl--scaling;
   margin-bottom: $spacing-xl--scaling;
+}
+
+.pivot-reason--cash-price {
+  // create a bleeding background
+  background-color: var(--clr-background--inverted);
+  color: var(--clr-text--inverted);
+
+  margin-left: calc(-100vw / 2 + 500px / 2);
+  margin-right: calc(-100vw / 2 + 500px / 2);
+
+  padding-top: $spacing-l;
+  padding-bottom: $spacing-l;
+}
+
+.cash-price-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+
+  margin-top: $spacing-l;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 60em;
+
+  text-align: center;
+}
+
+.cash-price {
+  // create some seperation between each price
+  margin-bottom: 4rem;
+  margin-left: 2rem;
+  margin-right: 2rem;
+
+  // select the price value of the WINNER
+  &:nth-child(1) > &__value {
+    font-size: responsiveSize(120px, 300px);
+    line-height: 0.95em;
+  }
+  // select the price value of the 2ND and 3RD place
+  &:nth-child(2) > &__value,
+  &:nth-child(3) > &__value {
+    font-size: responsiveSize(36px, 48px);
+  }
+  &__value {
+    font-weight: 700;
+  }
+  &__position {
+    @extend .label;
+    font-size: responsiveSize(18px, 12px);
+  }
 }

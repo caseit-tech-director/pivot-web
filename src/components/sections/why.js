@@ -7,9 +7,7 @@ class why extends Component {
   render() {
     return (
       <section id="whyPivot">
-        <h2 className="centered-text section-break">
-          Are you ready for Pivot 2021
-        </h2>
+        <h2 className="centered-text section-break">Why Pivot 2021</h2>
         {/* Reason 1 */}
         <div className="pivot-reason main-grid">
           <h3 class="main-grid__primary-col">Take on challenges</h3>
@@ -52,15 +50,15 @@ class why extends Component {
           />
         </div>
         {/* Reason 3 */}
-        <div className="pivot-reason">
-          <h3>Gain Insight</h3>
-          <p>
+        <div className="pivot-reason main-grid">
+          <h3 className="main-grid__primary-col">Gain Insight</h3>
+          <p className="main-grid__primary-col">
             Ask questions and learn from successful business professionals who
             have been in your shoes
           </p>
 
-          <AlumniDisplay />
-          <p>
+          <AlumniDisplay className="main-grid__full-col" />
+          <p className="main-grid__secondary-col">
             In our <strong>Interactive Firside Chat sessions</strong>, Panel of
             SFU alumni from the MIS industry sharing their experiences and tips
             for aspiring business professionals
@@ -78,8 +76,8 @@ class why extends Component {
 
         {/* Reason - cash price */}
         <div className="pivot-reason pivot-reason--cash-price">
-          <h3>Suprise! Cash prize!</h3>
-          <p>
+          <h3 class="centered-text">Suprise! Cash prize!</h3>
+          <p class="centered-text">
             In addition to presenting in front of a panel of industry
             professionals, teams will be competing for a prize pool of{" "}
             <strong>up to $2400.</strong>
