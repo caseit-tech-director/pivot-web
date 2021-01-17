@@ -6,17 +6,22 @@
 
 @import "../style/breakpoints.scss";
 
+$center-column-width: 1400px;
+$center-column-margin: 20px;
+
 .full-width {
   position: relative;
 
-  max-width: 100em;
+  max-width: $center-column-width;
 
   // margin-left: 1rem;
   // margin-right: 1rem;
-  margin-left: 20px;
-  margin-right: 20px;
+  margin-left: $center-column-margin;
+  margin-right: $center-column-margin;
 
-  @include viewportLargerThan(100em) {
+  @include viewportLargerThan(
+    $center-column-width + $center-column-margin * 2
+  ) {
     margin-left: auto;
     margin-right: auto;
   }
