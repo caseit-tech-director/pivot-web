@@ -56,6 +56,20 @@ p {
   font-size: responsiveSize(24px, 32px);
 }
 
+$footnotes-spacing: 0.5rem;
+.footnotes {
+  margin-top: $footnotes-spacing;
+  font-family: "Roboto", Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+}
+.footnotes--heading {
+  @extend .footnotes;
+  font-weight: 700;
+  letter-spacing: 0.015em;
+  margin-bottom: $footnotes-spacing;
+}
+
 .centered-text > *,
 .centered-text {
   // make everything inside the centered text style center
