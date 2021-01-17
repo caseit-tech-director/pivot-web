@@ -1,7 +1,7 @@
 import React from "react";
 import "./AlumniDisplay.scss";
 
-const AlumniDisplay = () => {
+const AlumniDisplay = ({ className }) => {
   const alumniList = [
     {
       name: "John Doe",
@@ -20,7 +20,7 @@ const AlumniDisplay = () => {
     },
   ];
   return (
-    <div className="alumni-profile-container">
+    <div className={`alumni-profile-container ${className}`}>
       {alumniList.map((val) => {
         return (
           <div className="alumni-profile">
