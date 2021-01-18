@@ -15,14 +15,13 @@ const FaqItem = ({ question, answer }) => {
     <li className="faq-item">
       <a className="faq-item__toggle-button" onClick={toggleExpandState}>
         <div className="faq-item__toggle-label">{question}</div>
-        <motion.div
+        <motion.img
           className="faq-item__toggle-icon"
           animate={{
             rotate: expanded ? 180 : 0,
           }}
-        >
-          open icon
-        </motion.div>
+          src="img/accordion-toggle.svg"
+        />
       </a>
       <motion.p
         animate={{
