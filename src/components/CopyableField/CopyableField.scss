@@ -1,0 +1,63 @@
+.copyable-field {
+  max-width: 15em;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+
+  text-align: left;
+
+  background-color: var(--clr-interactive-5);
+  color: var(--clr-interactive-4);
+
+  border-radius: 4px;
+
+  &__copy-text {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    padding-left: 0.5em;
+
+    line-height: auto;
+
+    flex-grow: 1;
+
+    border-bottom: none;
+    // border: 2px solid transparent;
+
+    display: block;
+    // clip or "hide" the field's text thats outside the container
+    overflow-x: auto;
+    // make the text stay on one line
+    white-space: nowrap;
+  }
+
+  &__button {
+    // make it stick to the right side of the control
+    // position: absolute;
+    // top: 0rem;
+    // right: 0rem;
+    flex-grow: 0;
+    flex-shrink: 0;
+
+    background-color: var(--color-primary-lighter);
+    // position the button at the center
+    padding: 0.75rem 0.75rem;
+    border: none;
+
+    cursor: pointer;
+  }
+
+  &__copied-message {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+    // center the text
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    // change the color
+    color: var(--clr-interactive--inverted);
+    background-color: var(--clr-interactive-4);
+  }
+}

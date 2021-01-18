@@ -1,0 +1,23 @@
+.email-field {
+  margin-top: 4rem;
+
+  font-size: 24px;
+  font-weight: 500;
+  letter-spacing: -0.03em;
+}
+
+.social-media-icons {
+  margin-top: 2rem;
+
+  display: flex;
+  justify-content: center;
+
+  * {
+    margin: 0.25em;
+  }
+}
+
+.contact-header {
+  font-weight: 500;
+  color: var(--clr-primary-light);
+}

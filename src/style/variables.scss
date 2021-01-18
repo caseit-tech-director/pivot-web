@@ -1,14 +1,14 @@
 :root {
   // not sure if this is the best system of colour
-  
-  --clr-primary-light:rgb(4,73,176);
-  --clr-primary-dark: rgb(1,43,105);
-  --clr-accent-yellow: rgb(255,214,0);
-  --clr-accent-orange: rgb(255,114,54);
-  --clr-accent-pink:rgb(240,72,255);
+
+  --clr-primary-light: rgb(4, 73, 176);
+  --clr-primary-dark: rgb(1, 43, 105);
+  --clr-accent-yellow: rgb(255, 214, 0);
+  --clr-accent-orange: rgb(255, 114, 54);
+  --clr-accent-pink: rgb(240, 72, 255);
 
   // function based colour variables
-  --clr-background: #FFF;
+  --clr-background: #fff;
   --clr-text: var(--clr-primary-dark);
   --clr-text-variant: var(--clr-primary-light);
   // inverted colour
@@ -20,9 +20,9 @@
   --clr-interactive-2: var(--clr-accent-orange);
   --clr-interactive-3: var(--clr-accent-yellow);
   --clr-interactive-4: var(--clr-primary-light);
-  --clr-interactive--inverted: #FFF;
+  --clr-interactive-5: #ececec;
+  --clr-interactive--inverted: #fff;
 
   --clr-hover: var(--clr-primary-light);
-  --clr-hover--inverted: #FFF;
-
+  --clr-hover--inverted: #fff;
 }
