@@ -31,6 +31,8 @@ const CreditAnimation = ({ className }) => {
   );
 };
 
+const SCROLLING_DURATION = 20;
+
 const ScrollingItem = ({
   name,
   position,
@@ -41,8 +43,6 @@ const ScrollingItem = ({
 }) => {
   const scrollCompletion = useMotionValue(0);
   const [measurement, containerRef] = useElementMeasurement([]);
-
-  const SCROLLING_DURATION = 15;
 
   useEffect(() => {
     const resetAnimation = () => {
