@@ -10,19 +10,39 @@
   margin-top: $spacing-s;
   margin-bottom: $spacing-m;
 }
+
+$alumni-profile-breakpoint: $breakpoint-s;
 .alumni-profile {
-  flex: 10rem 1 1;
+  // push the heads off the margins when in mobile
+  margin-left: auto;
+  margin-right: auto;
+
+  // =======================================================
+  // the layout offset
+  flex: 0 1 12rem;
+
+  @include viewportLargerThan($alumni-profile-breakpoint) {
+    flex: 1 1 10rem;
+  }
 
   $vertical-offset: $spacing-xl;
   &:nth-child(1) {
-    margin-top: $vertical-offset * 1;
+    @include viewportLargerThan($alumni-profile-breakpoint) {
+      margin-top: $vertical-offset * 1;
+    }
   }
   &:nth-child(2) {
     margin-top: $vertical-offset * 2;
+    @include viewportLargerThan($alumni-profile-breakpoint) {
+      margin-top: $vertical-offset * 2;
+    }
   }
   &:nth-child(3) {
-    margin-top: $vertical-offset * 0;
+    @include viewportLargerThan($alumni-profile-breakpoint) {
+      margin-top: $vertical-offset * 0;
+    }
   }
+  // =======================================================
 
   &__description {
     padding: $spacing-s;
@@ -37,7 +57,7 @@
 
   &__image {
     width: 100%;
-    height: 30vw;
+    height: 40vw;
     object-fit: cover;
   }
   &__name {
