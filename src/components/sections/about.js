@@ -3,7 +3,7 @@ import React, { Component } from "react";
 class about extends Component {
   render() {
     return (
-      <section id="about" className="centered-text section-break">
+      <section id="about" className="centered-text section-break full-width">
         <h2>About Pivot</h2>
         <p>
           Local rendition of CaseIT, the world’s premier MIS business case

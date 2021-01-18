@@ -9,7 +9,7 @@ class why extends Component {
       <section id="whyPivot">
         <h2 className="centered-text section-break">Why Pivot 2021</h2>
         {/* Reason 1 */}
-        <div className="pivot-reason main-grid">
+        <div className="pivot-reason main-grid full-width">
           <h3 class="main-grid__primary-col">Take on challenges</h3>
           <p class="main-grid__primary-col">
             Test your abilities to further your problem-solving skills and
@@ -37,7 +37,7 @@ class why extends Component {
           </div>
         </div>
         {/* Reason 2 */}
-        <div className="pivot-reason main-grid">
+        <div className="pivot-reason main-grid full-width">
           <h3 className="main-grid__primary-col">Expand your network</h3>
           <p className="main-grid__primary-col">
             Network with recruiters from top consulting firms, rapidly-growing
@@ -50,7 +50,7 @@ class why extends Component {
           />
         </div>
         {/* Reason 3 */}
-        <div className="pivot-reason main-grid">
+        <div className="pivot-reason main-grid full-width">
           <h3 className="main-grid__primary-col">Gain Insight</h3>
           <p className="main-grid__primary-col">
             Ask questions and learn from successful business professionals who
@@ -66,7 +66,7 @@ class why extends Component {
         </div>
 
         {/* Reason 4 */}
-        <div className="pivot-reason">
+        <div className="pivot-reason full-width">
           <h3>Recruitment Opportunities</h3>
           <p>
             Opportunity to include your resume in the PIVOT Competitor Resume

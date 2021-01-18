@@ -62,11 +62,14 @@ const HomePage = () => {
         applicationLink={PIVOT_APPS_LINK}
       />
 
-      <main className="full-width">
+      <main>
         <AboutSection />
         <WhySection />
         <ScheduleSection />
-        <TeamSection />
+        <TeamSection
+          daysLeft={daysToAppsDeadline}
+          date={PIVOT_APPS_DEADLINE_DATE}
+        />
         <FaqSection />
         <ContactSection />
       </main>
