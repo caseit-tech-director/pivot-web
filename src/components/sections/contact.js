@@ -8,7 +8,11 @@ class contact extends Component {
     return (
       <section id="contact" className="centered-text">
         <h2 className="contact-header">Not getting your answer?</h2>
-        <CopyableField className="email-field">pivot_btm@sfu.ca</CopyableField>
+        <CopyableField className="email-field">
+          <a href="mailto:pivot_btm@sfu.ca" className="email-field__content">
+            pivot_btm@sfu.ca
+          </a>
+        </CopyableField>
         <div className="social-media-icons">
           <a
             href="https://www.facebook.com/PIVOTCaseCompetition"

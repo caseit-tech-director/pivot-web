@@ -28,14 +28,18 @@ const copiedMessageAnimation = {
   },
 };
 
-// Show copied message for 1 second
+// Show copied message for 1 seconds
 const copiedMessageDuration = 1000;
 
 const CopyableField = ({ children, className }) => {
   const [isCopied, setIsCopied] = useState(false);
 
+  // in case the copy content is a link
+  const copyContent =
+    typeof children === "string" ? children : children.children;
+
   const handleButtonClick = () => {
-    copyTextToClipboard(children);
+    copyTextToClipboard(copyContent);
     setIsCopied(true);
     setTimeout(() => setIsCopied(false), copiedMessageDuration);
   };
@@ -64,10 +68,6 @@ const CopyableField = ({ children, className }) => {
       />
     </div>
   );
-};
-
-CopyableField.propTypes = {
-  children: PropTypes.string,
 };
 
 export default CopyableField;
