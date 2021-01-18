@@ -1,17 +1,17 @@
 @import "./typography.scss";
 
-a {
+a.button {
   @extend .button-text;
 
   display: inline-block;
 
   color: var(--clr-text--inverted);
   background-color: var(--clr-interactive-4);
-  
-  padding: .75rem 1.25rem;  
+
+  padding: 0.75rem 1.25rem;
   text-decoration: none;
 }
 
 a:hover {
-  opacity: .9;
+  opacity: 0.9;
 }

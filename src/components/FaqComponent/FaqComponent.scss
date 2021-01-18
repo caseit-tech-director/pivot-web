@@ -1,0 +1,79 @@
+@import "../../style/typography.scss";
+@import "../../style/breakpoints.scss";
+@import "../../style/layout.scss";
+
+$border-color: rgba(1, 43, 105, 0.2);
+$border-style: 2px solid $border-color;
+$faq-component-breakpoint: $breakpoint-xl;
+
+.faq-item {
+  // reset the list style
+  list-style: none;
+  margin-left: 0rem;
+
+  &__toggle-button {
+    // the question button
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    align-items: center; // center align the accordion vertically
+
+    line-height: 1.248em;
+  }
+  &__toggle-label {
+    font-family: "IBM Plex Sans";
+    font-weight: 500;
+    font-size: responsiveSize(18px, 20px);
+    letter-spacing: -0.03em;
+  }
+  &__toggle-icon {
+    // push the icon to the right
+    display: block;
+    margin-left: auto;
+  }
+  &__answer {
+    font-family: "IBM Plex Sans";
+    font-weight: normal;
+    font-size: responsiveSize(14px, 16px);
+    margin-top: 0.25em;
+    margin-bottom: 0.25em;
+  }
+}
+
+/**
+ * 
+ * .faq-list-container
+ *  +- .faq-list-label
+ *  +- .faq-list
+ * 
+ */
+
+.faq-list-container {
+  @include viewportLargerThan($faq-component-breakpoint) {
+    border-top: $border-style;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+  }
+}
+.faq-list {
+  margin-top: 1rem;
+  @include viewportLargerThan($faq-component-breakpoint) {
+  }
+}
+
+.faq-list-label {
+  font-family: "IBM Plex Sans";
+  font-size: responsiveSize(18px, 32px);
+  letter-spacing: -0.03em;
+
+  margin-top: $spacing-m;
+  padding-bottom: 1rem;
+
+  // responsive style
+  border-bottom: $border-style;
+  font-weight: bold;
+  @include viewportLargerThan($faq-component-breakpoint) {
+    font-weight: normal;
+    border-bottom: none;
+  }
+}

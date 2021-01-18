@@ -1,10 +1,25 @@
 import React, { Component } from "react";
+import { FaqList, FaqItem } from "../FaqComponent";
+
+// faq data
+import FaqData from "../../data/FaqData";
 
 class faq extends Component {
   render() {
     return (
-      <section id="faq">
-        <h2>Frequently Asked Question</h2>
+      <section id="faq" className="full-width main-grid">
+        <h2 className="main-grid__middle-col">Frequently Asked Question</h2>
+        <div className="main-grid__middle-col">
+          {FaqData.map(({ catagory, content }) => {
+            return (
+              <FaqList catagoryName={catagory}>
+                {content.map(({ question, answer }) => {
+                  return <FaqItem question={question} answer={answer} />;
+                })}
+              </FaqList>
+            );
+          })}
+        </div>
       </section>
     );
   }
