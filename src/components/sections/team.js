@@ -24,7 +24,7 @@ class team extends Component {
           <a
             href="https://www.facebook.com/groups/2959308947727798"
             target="blank"
-            class="team-cta__button"
+            class="team-cta__button button"
           >
             Find my Team
           </a>

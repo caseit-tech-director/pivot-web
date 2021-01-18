@@ -16,7 +16,7 @@ const hero = ({ pivotBeginDate, pivotEndDate, daysLeft, applicationLink }) => (
       <p className="hero-cta__cta-text label">
         {Math.floor(daysLeft)} days left!
       </p>
-      <Link to={applicationLink} target="blank">
+      <Link to={applicationLink} target="blank" className="button">
         Apply Now
       </Link>
     </div>
