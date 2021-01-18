@@ -7,7 +7,7 @@ class why extends Component {
   render() {
     return (
       <section id="whyPivot">
-        <h2 className="centered-text section-break">Why Pivot 2021</h2>
+        <h2 className="centered-text">Why Pivot 2021</h2>
         {/* Reason 1 */}
         <div className="pivot-reason main-grid full-width">
           <h3 class="main-grid__primary-col">Take on challenges</h3>

@@ -3,9 +3,16 @@
 @import "../../style/typography.scss";
 @import "../../style/breakpoints.scss";
 
+#whyPivot {
+  h2 {
+    margin-top: $spacing-l;
+    margin-bottom: $spacing-l;
+  }
+}
+
 .pivot-reason {
-  margin-top: $spacing-xxl;
-  margin-bottom: $spacing-xxl;
+  // margin-top: $spacing-xxl;
+  margin-bottom: $spacing-xl;
 }
 
 $glitch-effect-height-offset-top: 35vw;
