@@ -4,19 +4,19 @@ import "./AlumniDisplay.scss";
 const AlumniDisplay = ({ className }) => {
   const alumniList = [
     {
-      name: "John Doe",
-      position: "consultant, SAP",
-      image: "https://source.unsplash.com/random/800x600/?business+person",
+      name: "Brian Yan Muk",
+      position: "Director of Education, Nextech AR Solution",
+      image: "img/headshot-brian.jpg",
     },
     {
-      name: "John Doe",
-      position: "consultant, SAP",
-      image: "https://source.unsplash.com/random/800x600/?business+person",
+      name: "Michelle Chen",
+      position: "Associate Product Manager, Electronic Arts",
+      image: "img/headshot-michelle-chen.jpg",
     },
     {
-      name: "John Doe",
-      position: "consultant, SAP",
-      image: "https://source.unsplash.com/random/800x600/?business+person",
+      name: "Anthony Siu",
+      position: "Project Manager, GAP",
+      image: "img/headshot-anthony-siu.jpg",
     },
   ];
   return (
