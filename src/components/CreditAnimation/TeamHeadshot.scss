@@ -1,0 +1,20 @@
+@import "../../style/typography.scss";
+
+.team-headshot {
+  @extend .label;
+
+  text-align: left;
+
+  &__image {
+    width: 10em;
+    height: 10em;
+    margin-bottom: 0.5rem;
+    object-fit: cover;
+  }
+  &__name {
+    font-weight: bold;
+  }
+  &__position {
+    font-weight: normal;
+  }
+}
