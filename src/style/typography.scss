@@ -5,7 +5,8 @@ body {
   color: var(--clr-text);
 }
 
-h1 {
+h1,
+.h1 {
   font-family: "IBM Plex Sans";
   font-size: responsiveSize(36px, 96px);
   font-weight: 500;
@@ -15,7 +16,8 @@ h1 {
   color: var(--clr-primary-light);
 }
 
-h2 {
+h2,
+.h2 {
   font-family: "IBM Plex Sans";
   // @include responsiveFontSize(32px, 48px);
   font-size: responsiveSize(32px, 48px);
@@ -24,7 +26,8 @@ h2 {
   letter-spacing: -0.03em;
 }
 
-h3 {
+h3,
+.h3 {
   font-family: "IBM Plex Sans";
   font-size: responsiveSize(24px, 32px);
   font-weight: 700; // bold

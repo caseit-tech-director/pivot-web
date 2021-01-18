@@ -1,0 +1,18 @@
+@import "../../style/breakpoints.scss";
+
+.glitching-effect-team {
+  width: 90%;
+}
+
+.team-cta {
+  margin-top: 2em;
+
+  &__heading {
+    max-width: responsiveSize(500px, 700px);
+  }
+  &__subheading {
+  }
+  &__button {
+    margin-top: 4rem;
+  }
+}
