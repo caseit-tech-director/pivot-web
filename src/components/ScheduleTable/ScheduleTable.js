@@ -1,6 +1,6 @@
 import React from "react";
 import EventItem from "./EventItem";
-import ScheduleEvents from "./ScheduleEvents";
+import ScheduleEvents from "../../data/ScheduleEvents";
 
 import "./ScheduleTable.scss";
 
