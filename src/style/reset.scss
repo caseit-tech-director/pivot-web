@@ -23,19 +23,20 @@ a {
 /* 
  * remove horizontal scrolling for mobile
  */
-html, body {
+html,
+body {
   overflow-x: hidden;
 }
 body {
-  position: relative
+  position: relative;
 }
 
 /* 
  * text selection style
  */
 ::selection {
-  background-color: rgba(200, 200, 200, 0.5);
-  color: var(--color-primary-darkest) !important;
+  background-color: var(--clr-primary-dark);
+  color: #fff !important;
 }
 /* 
  *++++++++++++++++++++++
@@ -101,7 +102,7 @@ body {
  *+++++++++++++++++++++
  */
 
-/* add "hand" cursor to non-disabled button elements. */ 
+/* add "hand" cursor to non-disabled button elements. */
 button,
 input[type="button"],
 input[type="reset"],
