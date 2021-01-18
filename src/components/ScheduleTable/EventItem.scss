@@ -7,6 +7,11 @@ $gap: 2rem;
   display: flex;
   flex-direction: row;
 
+  // a little bit space to align the list to the date
+  &:first-child {
+    margin-top: 0.2em;
+  }
+
   // align the content
   align-items: baseline;
 
