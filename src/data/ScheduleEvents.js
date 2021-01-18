@@ -1,46 +1,42 @@
 const day1 = [
   {
-    name: "Opening Remarks",
-    time: "10:20",
+    name: "Opening",
+    time: "11:00 am",
   },
   {
-    name: "Virtual Fireside Chat with business",
-    time: "10:20",
+    name: "Fireside Chat",
+    time: "11:30 am",
   },
   {
-    name: "Virtual Networking Session",
-    time: "10:20",
+    name: "Virtual Networking",
+    time: "01:00 pm",
   },
   {
-    name: "Live Case Presentation",
-    time: "10:20",
+    name: "Live case presentation and case Q&A",
+    time: "02:30 pm",
   },
   {
-    name: "Closing Remarks and Division Reveal",
-    time: "10:20",
+    name: "Division reveal and closing remarks",
+    time: "03:15 pm",
   },
 ];
 
 const day2 = [
   {
     name: "Preliminary Presentations",
-    time: "10:20",
+    time: "10:00 am",
   },
   {
-    name: "Virtual Fireside Chat with business",
-    time: "10:20",
+    name: "Finalists Announcement",
+    time: "12:00 pm",
   },
   {
-    name: "Virtual Networking Session",
-    time: "10:20",
+    name: "Final Presentations",
+    time: "12:15 pm",
   },
   {
-    name: "Live Case Presentation",
-    time: "10:20",
-  },
-  {
-    name: "Closing Remarks and Division Reveal",
-    time: "10:20",
+    name: "Awards/Raffle and Closing remarks",
+    time: "02:15 pm",
   },
 ];
 

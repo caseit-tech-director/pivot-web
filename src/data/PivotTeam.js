@@ -5,18 +5,23 @@ export default [
     image: "https://source.unsplash.com/random",
   },
   {
-    name: "Henry Nguyen",
-    position: "Project Manager",
+    name: "Kelly Dai Chuy",
+    position: "Pivot Coordinator",
     image: "https://source.unsplash.com/random",
   },
   {
-    name: "Henry Nguyen",
-    position: "Project Manager",
+    name: "Gurbir Singh Deol",
+    position: "Pivot Coordinator",
     image: "https://source.unsplash.com/random",
   },
   {
-    name: "Henry Nguyen",
-    position: "Project Manager",
+    name: "Emily Su",
+    position: "Pivot Coordinator",
+    image: "https://source.unsplash.com/random",
+  },
+  {
+    name: "Tejas Gandesha",
+    position: "Pivot Coordinator",
     image: "https://source.unsplash.com/random",
   },
 ];
