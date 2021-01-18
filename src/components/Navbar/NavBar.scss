@@ -1,15 +1,33 @@
-.NavbarItems{
-    margin-top: 30vh;
-    // --bottom-margin: 30vh;
-    background: var(--clr-primary-light);
-    height: 80px;
+.navbar {
+    width: 100%;
+    min-height: 50px;
+    box-sizing: border-box;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    font-size: 1.2rem;
-}
+    background-color: #eee;
+    transition: all 0.8s ease-in-out;
+    visibility: hidden;
+    opacity: 1;
+  }
 
-.navbar-logo{
-    margin-right: auto; // push it to the left
-    height: 32px;
-}
+  //IMPORTANT
+  .scrolled {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: var(--clr-primary-light);
+    transition: all 0.8s ease-out;
+    visibility: visible;
+  }
+  .logo img {
+    width: 50px;
+  }
+
+  .navigation {
+    min-width: 50px
+  }
+
+//   .navbar{
+    
+//   }
