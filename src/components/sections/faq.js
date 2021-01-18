@@ -8,8 +8,8 @@ class faq extends Component {
   render() {
     return (
       <section id="faq" className="full-width main-grid">
-        <h2 className="main-grid__middle-col">Frequently Asked Question</h2>
-        <div className="main-grid__middle-col">
+        <h2 className="main-grid__shifted-col">Frequently Asked Question</h2>
+        <div className="main-grid__shifted-col">
           {FaqData.map(({ catagory, content }) => {
             return (
               <FaqList catagoryName={catagory}>

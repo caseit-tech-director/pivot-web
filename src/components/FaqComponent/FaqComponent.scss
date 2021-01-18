@@ -49,6 +49,7 @@ $faq-component-breakpoint: $breakpoint-xl;
  */
 
 .faq-list-container {
+  margin-top: $spacing-m;
   @include viewportLargerThan($faq-component-breakpoint) {
     border-top: $border-style;
     display: grid;
@@ -66,7 +67,6 @@ $faq-component-breakpoint: $breakpoint-xl;
   font-size: responsiveSize(18px, 32px);
   letter-spacing: -0.03em;
 
-  margin-top: $spacing-m;
   padding-bottom: 1rem;
 
   // responsive style
