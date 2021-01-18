@@ -76,6 +76,11 @@ class why extends Component {
 
         {/* Reason - cash price */}
         <div className="pivot-reason pivot-reason--cash-price">
+          <img
+            src="img/glitch-overlay-price-begin.svg"
+            alt=""
+            className="glitch-effect"
+          />
           <h3 class="centered-text">Suprise! Cash prize!</h3>
           <p class="centered-text">
             In addition to presenting in front of a panel of industry
@@ -102,6 +107,11 @@ class why extends Component {
               </div>
             </div>
           </div>
+          <img
+            src="img/glitch-overlay-price-end.svg"
+            alt=""
+            className="glitch-effect"
+          />
         </div>
       </section>
     );

@@ -4,20 +4,32 @@
 @import "../../style/breakpoints.scss";
 
 .pivot-reason {
-  margin-top: $spacing-xl--scaling;
-  margin-bottom: $spacing-xl--scaling;
+  margin-top: $spacing-xxl;
+  margin-bottom: $spacing-xxl;
 }
 
+$glitch-effect-height-offset-top: 35vw;
+$glitch-effect-height-offset-bottom: 50vw;
 .pivot-reason--cash-price {
   // create a bleeding background
   background-color: var(--clr-background--inverted);
   color: var(--clr-text--inverted);
 
-  margin-left: calc(-100vw / 2 + 200px / 2);
-  margin-right: calc(-100vw / 2 + 200px / 2);
+  padding-top: $glitch-effect-height-offset-top;
+  padding-bottom: $glitch-effect-height-offset-bottom;
 
-  padding-top: $spacing-xxl;
-  padding-bottom: $spacing-xxl;
+  position: relative;
+
+  .glitch-effect {
+    position: absolute;
+    width: 100vw;
+    &:first-child {
+      top: 0rem;
+    }
+    &:last-child {
+      bottom: 0rem;
+    }
+  }
 }
 
 .cash-price-container {
