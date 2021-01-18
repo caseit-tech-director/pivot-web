@@ -1,2 +1,2 @@
-import AlumniDisplay from "./AlumniDispaly";
+import AlumniDisplay from "./AlumniDisplay";
 export default AlumniDisplay;
