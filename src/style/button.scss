@@ -15,3 +15,9 @@ a.button {
 a:hover {
   opacity: 0.9;
 }
+
+a {
+  color: var(--clr-text--inverted);
+  background-color: var(--clr-interactive-4);
+  text-decoration: none;
+}

@@ -33,7 +33,15 @@ class why extends Component {
               out the BTM knowledge I had gained in my MIS concentration in the
               last term.”
             </p>
-            <div className="label">John Doe - 2019</div>
+            <div className="label">
+              <a
+                target="blank"
+                href="https://www.linkedin.com/in/thelokeshgupta/?originalSubdomain=ca"
+              >
+                Lokesh Gupta
+              </a>{" "}
+              - 2019 Pivot
+            </div>
           </div>
         </div>
         {/* Reason 2 */}
