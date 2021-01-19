@@ -101,7 +101,7 @@ const NavBar = () => {
           {MenuItems.map(({ title, url }, index) => {
             const linkClassName = (() => {
               // for server side rendering
-              if (window !== null) {
+              if (typeof window !== "undefined") {
                 return window.location.hash === url
                   ? "nav-link nav-link--current"
                   : "nav-link";
