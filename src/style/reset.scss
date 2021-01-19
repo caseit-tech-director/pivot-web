@@ -37,6 +37,12 @@ html,
 body {
   scroll-behavior: smooth;
 }
+.section-anchor:not([href]) {
+  display: block;
+  position: relative;
+  top: -200px;
+  visibility: hidden;
+}
 
 /* 
  * text selection style

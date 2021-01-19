@@ -15,7 +15,8 @@ class team extends Component {
           alt="glitching colour visual effect"
           className="glitching-effect-team"
         />
-        <section id="team" className="full-width team-cta">
+        <section className="full-width team-cta">
+          <a id="team" className="section-anchor"></a>
           <h2 className="h1 team-cta__heading">Team up and buckle up! </h2>
           <div className="team-cta__subheading">
             Deadline in {Math.floor(this.props.daysLeft)} Days! (

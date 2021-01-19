@@ -5,7 +5,8 @@ class about extends Component {
   render() {
     return (
       <>
-        <section id="about" className="centered-text section-break full-width">
+        <section className="centered-text section-break full-width">
+          <a id="about" className="section-anchor"></a>
           <h2>About Pivot</h2>
           <p>
             <strong>Local rendition of CaseIT</strong>, the world’s premier MIS

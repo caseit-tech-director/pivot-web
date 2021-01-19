@@ -6,7 +6,8 @@ import AlumniDisplay from "../AlumniDisplay";
 class why extends Component {
   render() {
     return (
-      <section id="whyPivot">
+      <section class="whyPivot">
+        <a id="whyPivot" className="section-anchor"></a>
         <h2 className="centered-text">Why Pivot 2021</h2>
         {/* Reason 1 */}
         <div className="pivot-reason main-grid full-width">
