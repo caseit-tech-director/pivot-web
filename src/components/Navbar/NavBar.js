@@ -62,6 +62,8 @@ const NavBar = () => {
   // Scroll spy function
   const scrollingTimeout = useRef();
   const handleLinkClick = (e) => {
+    if (!document) return;
+
     // re-trigger the scrolling even if the user click the same link again
     const targetElement = document.querySelector(window.location.hash);
     if (!targetElement) return;
@@ -97,13 +99,18 @@ const NavBar = () => {
             className="nav-bar__progress"
           ></motion.div>
           {MenuItems.map(({ title, url }, index) => {
+            const linkClassName = (() => {
+              // for server side rendering
+              if (!window) return "nav-link";
+
+              return window.location.hash === url
+                ? "nav-link nav-link--current"
+                : "nav-link";
+            })();
+
             return (
               <Link
-                className={
-                  window.location.hash === url
-                    ? "nav-link nav-link--current"
-                    : "nav-link"
-                }
+                className={linkClassName}
                 to={url}
                 key={index}
                 onClick={handleLinkClick}
