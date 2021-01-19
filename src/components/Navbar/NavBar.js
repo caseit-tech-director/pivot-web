@@ -2,45 +2,53 @@ import React, { useEffect, useState, useMemo, useRef } from "react";
 import { motion } from "framer-motion";
 import { MenuItems } from "./MenuItems";
 import { Link } from "gatsby";
+
+import { useSectionProgressData } from "./NavContext";
 import "./NavBar.scss";
 
 const SHOW_TRIGGER_Y = 700;
 
 const NavBar = () => {
   const [scrolled, setScrolled] = useState(false);
-  const [scrollPos, setScrollPos] = useState(0);
   const [isScrollingToSection, setIsScrollingToSection] = useState(false);
-
-  // grab all the section elements on the menu item list
-  const sectionsElement = useMemo(() => {
-    return MenuItems.map(({ url }) => {
-      return document.querySelector(`${url}`);
-    });
-  }, [scrollPos]);
-
-  const sectionsInView = sectionsElement.filter((elm) => {
-    // null check elm, in case it the sections haven't render yet
-    if (!elm) return;
-
-    // using bounding client rect to determine whether a specific element is in view
-    const boundingClientRect = elm.getBoundingClientRect();
-    if (
-      boundingClientRect.top <= window.innerHeight * 0.1 && //.25 tolerance
-      boundingClientRect.top > 0
-    ) {
-      return true;
-    }
-    return false;
-  });
-
-  // autometically update the hash tag when the user scroll to a specific section
-  const viewingSection = sectionsInView[sectionsInView.length - 1];
-  if (viewingSection && !isScrollingToSection)
-    window.history.pushState({}, "", `#${viewingSection.id}`);
-
-  const currentSection = 0;
-  const currentSectionProgress = 0;
   const [scrollProgress, setScrollProgress] = useState(0);
+  const [currentSection, allSectionsProgress] = useSectionProgressData();
+
+  // function for disabling location hash change to prevent race condition
+  function beginAutoScrolling() {
+    setIsScrollingToSection(true);
+    // abort the current itmetout
+    if (scrollingTimeout.current) clearTimeout(scrollingTimeout.current);
+    scrollingTimeout.current = setTimeout(() => {
+      setIsScrollingToSection(false);
+    }, 1000); // half a second timout tolerance
+  }
+
+  // call begin auto scrolling right at the beginning
+  // for use cases where the user land on the page with a # location
+  // useEffect(() => {
+  //   beginAutoScrolling();
+  // }, []);
+
+  // update the location hash base on the id
+  useEffect(() => {
+    if (typeof currentSection.id !== "string") return;
+    if (currentSection.id !== "" && !isScrollingToSection)
+      window.history.pushState({}, "", `#${currentSection.id}`);
+  }, [currentSection.id]);
+
+  // update progress bar base on the progress data
+  useEffect(() => {
+    // get the current section index
+    const currentSectionInEntry = allSectionsProgress[currentSection.id];
+    if (!currentSectionInEntry) return;
+
+    const sectionsCount = Object.keys(allSectionsProgress).length;
+    const overallProgress =
+      (currentSectionInEntry.index + currentSection.progress) / sectionsCount;
+
+    setScrollProgress(overallProgress);
+  }, [currentSection.progress]);
 
   const handleScroll = () => {
     const offset = window.scrollY;
@@ -49,21 +57,17 @@ const NavBar = () => {
     } else {
       setScrolled(false);
     }
-    // setScrollProgress();
-    setScrollPos(offset);
   };
 
+  // Scroll spy function
   const scrollingTimeout = useRef();
   const handleLinkClick = (e) => {
     // re-trigger the scrolling even if the user click the same link again
-    document.querySelector(window.location.hash).scrollIntoView();
+    const targetElement = document.querySelector(window.location.hash);
+    if (!targetElement) return;
 
-    setIsScrollingToSection(true);
-    // abort the current itmetout
-    if (scrollingTimeout.current) clearTimeout(scrollingTimeout.current);
-    scrollingTimeout.current = setTimeout(() => {
-      setIsScrollingToSection(false);
-    }, 1000); // half a second timout tolerance
+    beginAutoScrolling();
+    targetElement.scrollIntoView();
   };
 
   useEffect(() => {
@@ -80,6 +84,7 @@ const NavBar = () => {
     <div className="nav-container">
       <nav className={scrolled ? "nav nav--scrolled" : "nav"}>
         {/* nav logo */}
+
         <img
           src="img/pivot-logo-2021-inverted.svg"
           alt="Pivot Logo"
@@ -88,13 +93,17 @@ const NavBar = () => {
         {/* main nav bar */}
         <div className="nav-bar">
           <motion.div
-            style={{ width: `${scrollProgress}` }}
+            style={{ width: `${scrollProgress * 100}%` }}
             className="nav-bar__progress"
           ></motion.div>
           {MenuItems.map(({ title, url }, index) => {
             return (
               <Link
-                className="nav-link"
+                className={
+                  window.location.hash === url
+                    ? "nav-link nav-link--current"
+                    : "nav-link"
+                }
                 to={url}
                 key={index}
                 onClick={handleLinkClick}

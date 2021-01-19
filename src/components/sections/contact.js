@@ -7,7 +7,6 @@ class contact extends Component {
   render() {
     return (
       <section className="centered-text">
-        <a id="contact" className="section-anchor"></a>
         <h2 className="contact-header">Not getting your answer?</h2>
         <CopyableField className="email-field">
           <a href="mailto:pivot_btm@sfu.ca" className="email-field__content">

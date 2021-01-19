@@ -5,7 +5,6 @@ class schedule extends Component {
   render() {
     return (
       <section className="main-grid full-width">
-        <a id="schedule" className="section-anchor"></a>
         <h2 className="main-grid__shifted-col">Competition Schedule</h2>
         <div className="main-grid__shifted-col">
           <ScheduleTable />

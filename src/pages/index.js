@@ -11,7 +11,10 @@ import TeamSection from "../components/sections/team";
 import FaqSection from "../components/sections/faq";
 import ContactSection from "../components/sections/contact";
 import Footer from "../components/sections/footer";
+
 import NavBar from "../components/Navbar";
+import NavSection from "../components/Navbar/NavSection";
+import { NavDataContext } from "../components/Navbar/NavContext";
 
 const PIVOT_APPS_LINK = "https://www.surveymonkey.ca/r/pivot2021";
 
@@ -50,29 +53,43 @@ const HomePage = () => {
         <title>Pivot BTM Case Competition</title>
         {/* <link rel="canonical" href="http://mysite.com/example" /> */}
       </Helmet>
-      <NavBar />
 
-      {/* hero section */}
-      <HeroSection
-        pivotBeginDate={PIVOT_BEGIN_DATE}
-        pivotEndDate={PIVOT_END_DATE}
-        daysLeft={daysToAppsDeadline}
-        applicationLink={PIVOT_APPS_LINK}
-      />
+      <NavDataContext>
+        <NavBar />
 
-      <main>
-        <AboutSection />
-        <WhySection />
-        <ScheduleSection />
-        <TeamSection
+        {/* hero section */}
+        <HeroSection
+          pivotBeginDate={PIVOT_BEGIN_DATE}
+          pivotEndDate={PIVOT_END_DATE}
           daysLeft={daysToAppsDeadline}
-          date={PIVOT_APPS_DEADLINE_DATE}
+          applicationLink={PIVOT_APPS_LINK}
         />
-        <FaqSection />
-        <ContactSection />
-      </main>
 
-      <Footer />
+        <main>
+          <NavSection name="about">
+            <AboutSection />
+          </NavSection>
+          <NavSection name="whyPivot">
+            <WhySection />
+          </NavSection>
+          <NavSection name="schedule">
+            <ScheduleSection />
+          </NavSection>
+          <NavSection name="team">
+            <TeamSection
+              daysLeft={daysToAppsDeadline}
+              date={PIVOT_APPS_DEADLINE_DATE}
+            />
+          </NavSection>
+          <NavSection name="faq">
+            <FaqSection />
+          </NavSection>
+          <NavSection name="contact">
+            <ContactSection />
+          </NavSection>
+        </main>
+        <Footer />
+      </NavDataContext>
     </>
   );
 };

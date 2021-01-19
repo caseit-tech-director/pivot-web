@@ -98,7 +98,7 @@ $nav-breakpoint-mobile: $breakpoint-s;
   position: relative;
 
   // constrain the width
-  min-width: 30rem;
+  min-width: 40rem;
 
   // center align the progress bar
   margin-left: auto;
@@ -130,7 +130,14 @@ $nav-breakpoint-mobile: $breakpoint-s;
 
   // layout the bar button
   position: relative;
+
+  opacity: 0.5;
 }
+
+.nav-link--current {
+  opacity: 1;
+}
+
 .nav-link__title {
   // center the title text
   margin: auto;
