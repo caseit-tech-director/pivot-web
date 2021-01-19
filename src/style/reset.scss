@@ -30,6 +30,13 @@ body {
 body {
   position: relative;
 }
+/* 
+ * for smooth scrolling
+ */
+html,
+body {
+  scroll-behavior: smooth;
+}
 
 /* 
  * text selection style
