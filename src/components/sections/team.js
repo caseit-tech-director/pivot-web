@@ -24,7 +24,7 @@ class team extends Component {
           <a
             href="https://www.facebook.com/groups/2959308947727798"
             target="blank"
-            class="team-cta__button button"
+            className="team-cta__button button"
           >
             Find my Team
           </a>
@@ -35,8 +35,8 @@ class team extends Component {
 }
 
 team.propTypes = {
-  daysLeft: PropTypes.string.isRequired,
-  date: PropTypes.string.isRequired,
+  daysLeft: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+  date: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
 
 export default team;

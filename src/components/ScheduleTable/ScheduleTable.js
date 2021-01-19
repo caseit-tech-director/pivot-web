@@ -16,8 +16,8 @@ const ScheduleTable = () => {
           <div className="schedule-table__day-date">{day1Time}</div>
         </div>
         <div className="schedule-table__events event-list">
-          {ScheduleEvents.day1.map((val) => (
-            <EventItem name={val.name} time={val.time} />
+          {ScheduleEvents.day1.map((val, index) => (
+            <EventItem name={val.name} time={val.time} key={index} />
           ))}
         </div>
       </div>
@@ -30,8 +30,8 @@ const ScheduleTable = () => {
           <div className="schedule-table__day-date">{day2Time}</div>
         </div>
         <div className="schedule-table__events event-list">
-          {ScheduleEvents.day2.map((val) => (
-            <EventItem name={val.name} time={val.time} />
+          {ScheduleEvents.day2.map((val, index) => (
+            <EventItem name={val.name} time={val.time} key={index} />
           ))}
         </div>
       </div>

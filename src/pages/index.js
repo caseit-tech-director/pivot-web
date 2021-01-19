@@ -34,7 +34,7 @@ const calcDifferenceInDays = (earlierDate, laterDate) => {
   const Difference_In_Days = Difference_In_Time / (1000 * 3600 * 24);
 
   return Difference_In_Days;
-}
+};
 
 const HomePage = () => {
   const daysToAppsDeadline = calcDifferenceInDays(
@@ -50,6 +50,7 @@ const HomePage = () => {
         <title>Pivot BTM Case Competition</title>
         {/* <link rel="canonical" href="http://mysite.com/example" /> */}
       </Helmet>
+      <NavBar />
 
       {/* hero section */}
       <HeroSection
@@ -60,16 +61,15 @@ const HomePage = () => {
       />
 
       <main>
-        <NavBar/>
         <AboutSection />
-        <WhySection/>
+        <WhySection />
         <ScheduleSection />
         <TeamSection
           daysLeft={daysToAppsDeadline}
           date={PIVOT_APPS_DEADLINE_DATE}
-          />
-        <FaqSection/>
-        <ContactSection/>
+        />
+        <FaqSection />
+        <ContactSection />
       </main>
 
       <Footer />

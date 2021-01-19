@@ -15,7 +15,8 @@ const FaqList = ({ catagoryName, children }) => {
 
 FaqList.propTypes = {
   catagoryName: PropTypes.string.isRequired,
-  children: PropTypes.element.isRequired,
+  children: PropTypes.oneOfType([PropTypes.element, PropTypes.array])
+    .isRequired,
 };
 
 export default FaqList;

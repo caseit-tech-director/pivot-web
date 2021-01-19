@@ -1,33 +1,158 @@
-.navbar {
-    width: 100%;
-    min-height: 50px;
-    box-sizing: border-box;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #eee;
-    transition: all 0.8s ease-in-out;
-    visibility: hidden;
-    opacity: 1;
+@import "../../style/typography.scss";
+@import "../../style/breakpoints.scss";
+@import "../../style/layout.scss";
+
+/*
+ *
+ * Element Structure Overview
+ * 
+ * .nav-container
+ * +- nav
+ *     +- .nav__logo
+ *     +- .nav--scrolled (state added when scrolled)
+ *  
+ *     +- .nav-bar
+ *         +- nav-bar__item
+ */
+
+// max height of the nav bar
+$nav-height: 64px;
+// the breakpoint at which the nav bar switches to mobile mode (aka bottom mode)
+$nav-breakpoint-mobile: $breakpoint-s;
+
+/*
+ *
+ * A fixed position container for encapsulating the whole navigation bar
+ * 
+ */
+.nav-container {
+  position: fixed;
+  width: 100%;
+
+  // push the nav bar to the bottom at mobile devices
+  bottom: 0rem;
+  @include viewportLargerThan($nav-breakpoint-mobile) {
+    bottom: auto;
   }
 
-  //IMPORTANT
-  .scrolled {
-    position: fixed;
-    top: 0;
-    left: 0;
-    background-color: var(--clr-primary-light);
-    transition: all 0.8s ease-out;
-    visibility: visible;
-  }
-  .logo img {
-    width: 50px;
+  // always on top
+  z-index: 10000000;
+}
+
+/*
+ *
+ * container that contains all the components in the nav bar,
+ * situated inside the fixed position "nav-container"
+ * 
+ */
+.nav {
+  // lock the nav bar to the center column width when it's big enough
+  @include viewportLargerThan($center-column-width) {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: $center-column-width;
   }
 
-  .navigation {
-    min-width: 50px
-  }
+  background-color: var(--clr-primary-light);
 
-//   .navbar{
-    
-//   }
+  min-height: $nav-height;
+
+  // make the flex item(logo, nav bar, apply button) full height
+  display: flex;
+  align-items: stretch;
+  justify-content: stretch;
+
+  // for the hide/show animation
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1); // ease out expo
+
+  // push the nav bar off the screen in the beginning for hiding it
+  // -100% for when the nav bar at top
+  // 100% for when the nav bar at bottom
+  transform: translateY(100%);
+  @include viewportLargerThan($nav-breakpoint-mobile) {
+    transform: translateY(-100%);
+  }
+}
+
+.nav__logo {
+  width: 50px;
+  margin-left: 1rem;
+}
+
+//IMPORTANT
+.nav--scrolled {
+  // animated back to original position when the bar is shown
+  transform: translateY(0);
+}
+
+/*
+ *
+ * The progress bar, container of links and the actual progress bar
+ * 
+ */
+.nav-bar {
+  display: flex;
+  flex-direction: row;
+
+  // for the progress bar
+  position: relative;
+
+  // constrain the width
+  min-width: 30rem;
+
+  // center align the progress bar
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.nav-bar__progress {
+  background-color: var(--clr-primary-dark);
+  position: absolute;
+  height: 100%;
+}
+
+/*
+ *
+ * Links in the progress bar
+ * 
+ */
+.nav-link {
+  // make the button equal size
+  flex-grow: 1;
+  flex-basis: 0;
+
+  // reset the default link styles
+  color: var(--clr-interactive--inverted);
+  text-decoration: none;
+
+  display: flex;
+  height: 100%;
+
+  // layout the bar button
+  position: relative;
+}
+.nav-link__title {
+  // center the title text
+  margin: auto;
+
+  // typography of the link title
+  letter-spacing: -0.03em;
+  font-weight: 500;
+}
+.nav-link__index {
+  // DESKTOP: push the bar alignment ot the bottom
+  position: absolute;
+  bottom: 0rem;
+
+  // visuals of the section number marker
+  border-left: 1px solid var(--clr-interactive--inverted);
+  padding-left: 0.25rem;
+  // HACK: to make the line aligns to the font height
+  line-height: 80%;
+  // HACK: extrude the bottom part of the border
+  padding-bottom: 0.5rem;
+
+  @extend .label;
+  font-size: 12px;
+  font-weight: normal;
+}

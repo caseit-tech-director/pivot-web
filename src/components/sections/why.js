@@ -10,8 +10,8 @@ class why extends Component {
         <h2 className="centered-text">Why Pivot 2021</h2>
         {/* Reason 1 */}
         <div className="pivot-reason main-grid full-width">
-          <h3 class="main-grid__primary-col">Take on challenges</h3>
-          <p class="main-grid__primary-col">
+          <h3 className="main-grid__primary-col">Take on challenges</h3>
+          <p className="main-grid__primary-col">
             Test your abilities to further your problem-solving skills and
             compete against a pool of qualified teams.
           </p>
@@ -81,8 +81,8 @@ class why extends Component {
             alt=""
             className="glitch-effect"
           />
-          <h3 class="centered-text">Suprise! Cash prize!</h3>
-          <p class="centered-text">
+          <h3 className="centered-text">Suprise! Cash prize!</h3>
+          <p className="centered-text">
             In addition to presenting in front of a panel of industry
             professionals, teams will be competing for a prize pool of{" "}
             <strong>up to $2400.</strong>
