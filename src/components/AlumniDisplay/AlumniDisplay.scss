@@ -19,13 +19,13 @@ $alumni-profile-breakpoint: $breakpoint-s;
 
   // =======================================================
   // the layout offset
-  flex: 0 1 12rem;
+  flex: 0 2 10rem;
 
   @include viewportLargerThan($alumni-profile-breakpoint) {
     flex: 1 1 10rem;
   }
 
-  $vertical-offset: $spacing-xl;
+  $vertical-offset: 10vw;
   &:nth-child(1) {
     @include viewportLargerThan($alumni-profile-breakpoint) {
       margin-top: $vertical-offset * 1;
@@ -49,6 +49,13 @@ $alumni-profile-breakpoint: $breakpoint-s;
 
     display: inline-block; // make the this container box wrap around its content
     background-color: var(--clr-background);
+
+    @include viewportLargerThan($alumni-profile-breakpoint) {
+      max-width: 22vw;
+    }
+    @include viewportLargerThan($alumni-profile-breakpoint) {
+      max-width: 22vw;
+    }
 
     // move it a little bit ot the top right
     transform: translate(2em, -2em);
