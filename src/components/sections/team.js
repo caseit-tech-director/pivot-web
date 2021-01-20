@@ -4,9 +4,6 @@ import PropTypes from "prop-types";
 import "./team.scss";
 
 class team extends Component {
-  constructor(props) {
-    super(props);
-  }
   render() {
     return (
       <>

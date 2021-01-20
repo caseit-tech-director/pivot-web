@@ -1,6 +1,6 @@
 import { useRef, useState, useEffect } from "react";
 
-const useElementMeasurement = (dependencies) => {
+const useElementMeasurement = (dependencies = []) => {
   const [offset, setOffset] = useState(null);
   const nodeRef = useRef(null);
 
@@ -30,10 +30,12 @@ const useElementMeasurement = (dependencies) => {
     };
   }, []);
 
+  const updateDependencies = dependencies ? dependencies : [];
+
   // recompute the value if the deps changes
   useEffect(() => {
     computeClientRect();
-  }, dependencies);
+  }, updateDependencies);
 
   return [offset, nodeRef];
 };

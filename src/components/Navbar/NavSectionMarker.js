@@ -9,7 +9,7 @@ import { useUpdateSectionProgress } from "./NavContext";
  */
 const SECTION_VERTICAL_OFFSET = 200; // vertical offset to compensate the anchor difference
 
-const NavSection = ({ name, children }) => {
+const NavSectionMarker = ({ name, children }) => {
   const measureRef = useRef();
   const updateSectionProgress = useUpdateSectionProgress();
   const [isSectionInView, setSectionInView] = useState(false);
@@ -79,6 +79,7 @@ const NavSection = ({ name, children }) => {
       <a
         id={name}
         className="section-anchor"
+        aria-hidden="true"
         style={{
           display: "block",
           position: "relative",
@@ -91,4 +92,4 @@ const NavSection = ({ name, children }) => {
   );
 };
 
-export default NavSection;
+export default NavSectionMarker;

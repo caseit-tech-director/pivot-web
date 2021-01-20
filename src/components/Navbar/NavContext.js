@@ -1,9 +1,9 @@
-import React, { useReducer, useContext, useState } from "react";
+import React, { useContext, useState } from "react";
 
 /*
  * HOW DOES THIS NAV CONTEXT SYSTEM WORK?
  * ------------------------------------------------
- * the scroll progress of each section (managed by NavSection component)
+ * the scroll progress of each section (managed by NavSectionMarker component)
  * will "submit" their scroll progress to a centralised place aka NavContext.
  *
  * NavBar component will then render the progress bar base on

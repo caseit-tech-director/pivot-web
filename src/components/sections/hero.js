@@ -3,8 +3,9 @@ import PropTypes from "prop-types";
 
 import "./hero.scss";
 import { Link } from "gatsby";
+import ApplyButton from "../ApplyButton";
 
-const hero = ({ pivotBeginDate, pivotEndDate, daysLeft, applicationLink }) => (
+const hero = ({ pivotBeginDate, pivotEndDate, daysLeft }) => (
   <header id="hero" className="full-width hero">
     {/* top bar */}
     <div className="hero-cta">
@@ -16,9 +17,7 @@ const hero = ({ pivotBeginDate, pivotEndDate, daysLeft, applicationLink }) => (
       <p className="hero-cta__cta-text label">
         {Math.floor(daysLeft)} days left!
       </p>
-      <Link to={applicationLink} target="blank" className="button">
-        Apply Now
-      </Link>
+      <ApplyButton />
     </div>
     {/* center area */}
     <h1 className="hero__heading">

@@ -1,6 +1,7 @@
 @import "../../style/typography.scss";
 @import "../../style/breakpoints.scss";
 @import "../../style/layout.scss";
+@import "../../style/button.scss";
 
 $border-color: rgba(1, 43, 105, 0.2);
 $border-style: 2px solid $border-color;
@@ -17,6 +18,9 @@ $faq-component-breakpoint: $breakpoint-xl;
     display: flex;
     flex-direction: row;
     align-items: center; // center align the accordion vertically
+
+    // reset link style
+    @extend .link-reset;
 
     line-height: 1.248em;
   }

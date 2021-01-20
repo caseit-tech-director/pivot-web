@@ -5,6 +5,7 @@ import { Link } from "gatsby";
 
 import { useSectionProgressData } from "./NavContext";
 import "./NavBar.scss";
+import ApplyButton from "../ApplyButton";
 
 const SHOW_TRIGGER_Y = 700;
 
@@ -30,11 +31,18 @@ const NavBar = () => {
   //   beginAutoScrolling();
   // }, []);
 
-  // update the location hash base on the id
   useEffect(() => {
     if (typeof currentSection.id !== "string") return;
-    if (currentSection.id !== "" && !isScrollingToSection)
+    if (currentSection.id !== "" && !isScrollingToSection) {
+      // update the location hash base on the id
       window.history.pushState({}, "", `#${currentSection.id}`);
+      // scroll to the menu item
+      const navElmToHighlight = document.querySelector(
+        `a[href="/#${currentSection.id}"]`
+      );
+      if (navElmToHighlight)
+        navElmToHighlight.scrollIntoView({ behavior: "smooth" });
+    }
   }, [currentSection.id]);
 
   // update progress bar base on the progress data
@@ -95,10 +103,11 @@ const NavBar = () => {
         {/* main nav bar */}
         <div className="nav-bar">
           <motion.div
-            style={{ width: `${scrollProgress * 100}%` }}
+            style={{ scaleX: `${scrollProgress}` }}
             className="nav-bar__progress"
           ></motion.div>
           {MenuItems.map(({ title, url }, index) => {
+            // highlight the current section base on the hash on url
             const linkClassName = (() => {
               // for server side rendering
               if (typeof window !== "undefined") {
@@ -124,6 +133,7 @@ const NavBar = () => {
           })}
         </div>
         {/* Apply button */}
+        <ApplyButton className="button--inverted nav__cta" />
       </nav>
     </div>
   );

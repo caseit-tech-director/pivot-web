@@ -13,7 +13,7 @@ import ContactSection from "../components/sections/contact";
 import Footer from "../components/sections/footer";
 
 import NavBar from "../components/Navbar";
-import NavSection from "../components/Navbar/NavSection";
+import NavSectionMarker from "../components/Navbar/NavSectionMarker";
 import { NavDataContext } from "../components/Navbar/NavContext";
 
 const PIVOT_APPS_LINK = "https://www.surveymonkey.ca/r/pivot2021";
@@ -44,7 +44,6 @@ const HomePage = () => {
     new Date(),
     PIVOT_APPS_DEADLINE_DATE
   );
-  console.log(Math.floor(daysToAppsDeadline));
   return (
     <>
       {/* meta data */}
@@ -55,7 +54,7 @@ const HomePage = () => {
       </Helmet>
 
       <NavDataContext>
-        <NavBar />
+        <NavBar applicationLink={PIVOT_APPS_LINK} />
 
         {/* hero section */}
         <HeroSection
@@ -66,27 +65,27 @@ const HomePage = () => {
         />
 
         <main>
-          <NavSection name="about">
+          <NavSectionMarker name="about">
             <AboutSection />
-          </NavSection>
-          <NavSection name="whyPivot">
+          </NavSectionMarker>
+          <NavSectionMarker name="whyPivot">
             <WhySection />
-          </NavSection>
-          <NavSection name="schedule">
+          </NavSectionMarker>
+          <NavSectionMarker name="schedule">
             <ScheduleSection />
-          </NavSection>
-          <NavSection name="team">
+          </NavSectionMarker>
+          <NavSectionMarker name="team">
             <TeamSection
               daysLeft={daysToAppsDeadline}
               date={PIVOT_APPS_DEADLINE_DATE}
             />
-          </NavSection>
-          <NavSection name="faq">
+          </NavSectionMarker>
+          <NavSectionMarker name="faq">
             <FaqSection />
-          </NavSection>
-          <NavSection name="contact">
+          </NavSectionMarker>
+          <NavSectionMarker name="contact">
             <ContactSection />
-          </NavSection>
+          </NavSectionMarker>
         </main>
         <Footer />
       </NavDataContext>

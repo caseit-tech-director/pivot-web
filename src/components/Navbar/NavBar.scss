@@ -19,6 +19,8 @@
 $nav-height: 64px;
 // the breakpoint at which the nav bar switches to mobile mode (aka bottom mode)
 $nav-breakpoint-mobile: $breakpoint-s;
+// the break point at which the nav bar will collapse into small view
+$nav-breakpoint-collapse: $breakpoint-m;
 
 /*
  *
@@ -55,7 +57,7 @@ $nav-breakpoint-mobile: $breakpoint-s;
 
   background-color: var(--clr-primary-light);
 
-  min-height: $nav-height;
+  height: $nav-height;
 
   // make the flex item(logo, nav bar, apply button) full height
   display: flex;
@@ -77,6 +79,17 @@ $nav-breakpoint-mobile: $breakpoint-s;
 .nav__logo {
   width: 50px;
   margin-left: 1rem;
+
+  @include viewportSmallerThan($nav-breakpoint-collapse) {
+    display: none;
+  }
+}
+
+.nav__cta {
+  flex: 0 0 auto;
+  opacity: 0.8;
+  display: flex;
+  align-items: center; // vertically align the text
 }
 
 //IMPORTANT
@@ -98,17 +111,36 @@ $nav-breakpoint-mobile: $breakpoint-s;
   position: relative;
 
   // constrain the width
-  min-width: 40rem;
+  flex: 0 1 40rem;
 
   // center align the progress bar
   margin-left: auto;
   margin-right: auto;
+
+  @include viewportSmallerThan($nav-breakpoint-collapse) {
+    overflow-x: scroll;
+    // hide scrollbar
+    scrollbar-width: none;
+
+    // hide scroll bar in safari
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
 }
 
 .nav-bar__progress {
   background-color: var(--clr-primary-dark);
   position: absolute;
+
+  transform-origin: top left;
   height: 100%;
+  width: 100%;
+
+  // hide the scroll bar in the collapsed view to avoid confusion
+  @include viewportSmallerThan($nav-breakpoint-collapse) {
+    display: none;
+  }
 }
 
 /*
@@ -132,6 +164,13 @@ $nav-breakpoint-mobile: $breakpoint-s;
   position: relative;
 
   opacity: 0.5;
+
+  // hide the nav links in mobile
+  @include viewportSmallerThan($nav-breakpoint-collapse) {
+    flex-grow: 1;
+    flex-shrink: 0;
+    flex-basis: 6rem;
+  }
 }
 
 .nav-link--current {

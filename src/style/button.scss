@@ -1,6 +1,6 @@
 @import "./typography.scss";
 
-a.button {
+.button {
   @extend .button-text;
 
   display: inline-block;
@@ -11,13 +11,22 @@ a.button {
   padding: 0.75rem 1.25rem;
   text-decoration: none;
 }
+.button--inverted {
+  color: var(--clr-interactive-4);
+  background-color: var(--clr-text--inverted);
+}
 
 a:hover {
   opacity: 0.9;
 }
 
 a {
-  color: var(--clr-text--inverted);
-  background-color: var(--clr-interactive-4);
+  // color: var(--clr-text--inverted);
+  color: var(--clr-primary-light);
   text-decoration: none;
+}
+
+.link-reset {
+  color: var(--clr-text);
+  background-color: transparent;
 }
