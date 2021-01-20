@@ -1,3 +1,4 @@
+@import "../../style/breakpoints.scss";
 .hero {
   --blurb-top-margin: 30vh;
   --bottom-margin: 30vh;
@@ -35,6 +36,7 @@
 .hero-cta {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
 
   align-items: center;
 
@@ -46,8 +48,29 @@
   }
 
   &__cta-text {
+    // font-size: 12px;
+
     margin: 0rem; // reset the margin from the default layout
     margin-right: 1rem;
-    font-size: 14px;
+    font-size: responsiveSize(12px, 14px) !important;
+
+    @include viewportSmallerThan($breakpoint-s) {
+      margin-right: 0rem;
+      // push it to the top
+      position: absolute;
+      top: 0rem;
+      left: 0rem;
+      right: 0rem;
+      text-align: center;
+
+      min-width: 100%;
+
+      background-color: var(--clr-background--inverted);
+      color: var(--clr-text--inverted);
+    }
+  }
+
+  &__cta-button {
+    flex: 0 0 auto;
   }
 }

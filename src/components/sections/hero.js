@@ -14,8 +14,10 @@ const hero = ({ pivotBeginDate, pivotEndDate, timeLeftString }) => {
           alt="Pivot Logo"
           className="hero-cta__logo"
         />
-        <p className="hero-cta__cta-text label">Closing in {timeLeftString}!</p>
-        <ApplyButton />
+        <p className="label hero-cta__cta-text">
+          Appliation closing in {timeLeftString}!
+        </p>
+        <ApplyButton className="hero-cta__cta-button" />
       </div>
       {/* center area */}
       <h1 className="hero__heading">
