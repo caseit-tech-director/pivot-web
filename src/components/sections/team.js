@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 
 import "./team.scss";
+import ApplyButton from "../ApplyButton";
 
 class team extends Component {
   render() {
@@ -15,15 +16,16 @@ class team extends Component {
         <section className="full-width team-cta">
           <h2 className="h1 team-cta__heading">Team up and buckle up! </h2>
           <div className="team-cta__subheading">
-            Deadline in {Math.floor(this.props.daysLeft)} Days! (
+            Application is closing in {Math.floor(this.props.daysLeft)} Days! (
             {`${this.props.date.getMonth() + 1}/${this.props.date.getDate()}`})
           </div>
+          <ApplyButton />
           <a
             href="https://www.facebook.com/groups/2959308947727798"
             target="blank"
-            className="team-cta__button button"
+            className="team-cta__button button button--secondary"
           >
-            Find my Team
+            Find my Team at Facebook
           </a>
         </section>
       </>

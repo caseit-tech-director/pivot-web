@@ -16,8 +16,6 @@ import NavBar from "../components/Navbar";
 import NavSectionMarker from "../components/Navbar/NavSectionMarker";
 import { NavDataContext } from "../components/Navbar/NavContext";
 
-const PIVOT_APPS_LINK = "https://www.surveymonkey.ca/r/pivot2021";
-
 // Calculating the important dates of pivot
 const PIVOT_DATES = {
   appsDeadline: "2021-01-22",
@@ -40,10 +38,8 @@ const calcDifferenceInDays = (earlierDate, laterDate) => {
 };
 
 const HomePage = () => {
-  const daysToAppsDeadline = calcDifferenceInDays(
-    new Date(),
-    PIVOT_APPS_DEADLINE_DATE
-  );
+  const daysToAppsDeadline =
+    calcDifferenceInDays(new Date(), PIVOT_APPS_DEADLINE_DATE) + 1;
   return (
     <>
       {/* meta data */}
@@ -54,14 +50,14 @@ const HomePage = () => {
       </Helmet>
 
       <NavDataContext>
-        <NavBar applicationLink={PIVOT_APPS_LINK} />
+        <NavBar />
 
         {/* hero section */}
         <HeroSection
           pivotBeginDate={PIVOT_BEGIN_DATE}
           pivotEndDate={PIVOT_END_DATE}
           daysLeft={daysToAppsDeadline}
-          applicationLink={PIVOT_APPS_LINK}
+          deadline={PIVOT_APPS_DEADLINE_DATE}
         />
 
         <main>

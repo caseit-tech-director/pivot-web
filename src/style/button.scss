@@ -11,6 +11,10 @@
   padding: 0.75rem 1.25rem;
   text-decoration: none;
 }
+.button--secondary {
+  color: var(--clr-interactive-4);
+  background-color: var(--clr-text--inverted);
+}
 .button--inverted {
   color: var(--clr-interactive-4);
   background-color: var(--clr-text--inverted);

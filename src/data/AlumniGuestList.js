@@ -11,7 +11,7 @@ const alumniList = [
   },
   {
     name: "Anthony Siu",
-    position: "Project Manager, GAP",
+    position: "Project Manager, SAP",
     image: "img/headshot-anthony-siu.jpg",
   },
 ];
