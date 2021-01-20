@@ -4,40 +4,64 @@ export default [
     content: [
       {
         question: "What documents do I need to apply?",
-        answer: "fdsa",
+        answer:
+          "Each competitor will be asked to upload their resume as part of their application process ",
       },
       {
-        question: "test",
-        answer: "fdsafdsafdsafads",
+        question: "Who is eligible to apply?",
+        answer:
+          "All undergraduate students attending a post-secondary school in BC are eligible to apply.",
       },
       {
-        question: "test",
-        answer: "fdsafdssdd",
+        question: "How long is the application going to take?",
+        answer:
+          "Application should take no longer than 5 minutes per competitor to fill out information and upload their resume",
       },
       {
-        question: "tedfsafdsast",
-        answer: "fdsafdfds",
+        question: "Who will be given priority in the application process?",
+        answer:
+          "Priority will be given to SFU students with a minimum of 45 credits (second academic year)",
+      },
+      {
+        question: "Can teams come from different schools?",
+        answer: "Yes",
       },
     ],
   },
   {
-    catagory: "Team forming",
+    catagory: "Competition",
     content: [
       {
-        question: "What documents do I need to apply?",
-        answer: "fdsa",
+        question: "Expectations of competitors",
+        answer:
+          "Competitors are expected to comply with the ‘PIVOT 2021 Rules’. Failure to abide by the rules may result in disqualifications.",
       },
       {
-        question: "test",
-        answer: "fdsafdsafdsafads",
+        question: "How many teams will be competing",
+        answer: "25 teams will be competing in the competition.",
       },
       {
-        question: "test",
-        answer: "fdsafdssdd",
+        question: "What are the types of awards I can win in Pivot 2021?",
+        answer: "Cash prize (only for top 3 finalists), Raffle, Best Speaker",
       },
       {
-        question: "tedfsafdsast",
-        answer: "fdsafdfds",
+        question: "What virtual event platform is PIVOT going to use?",
+        answer: "Hubilo",
+      },
+    ],
+  },
+  {
+    catagory: "Hubilo platform",
+    content: [
+      {
+        question: "What is Hubilo",
+        answer:
+          "A platform which allows competitors to navigate through breakout rooms with ease and replicates a similar in-person PIVOT experience",
+      },
+      {
+        question: "Where can I find help for Hubilo?",
+        answer:
+          "Guide/Navigation videos will be provided prior to the event, to help competitors familiarize themselves with the Hubilo platform",
       },
     ],
   },

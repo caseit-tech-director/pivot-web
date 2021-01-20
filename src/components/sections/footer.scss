@@ -97,7 +97,8 @@ footer {
 }
 
 .credit__animation {
-  height: $footer-content-extra-height;
+  // give it some extra height to compensate the bottom nav bar
+  height: $footer-content-extra-height * 1.2;
   @include viewportLargerThan($footer-breakpoint) {
     grid-column: 2;
     height: auto;

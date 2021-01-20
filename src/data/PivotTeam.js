@@ -2,26 +2,26 @@ export default [
   {
     name: "Henry Nguyen",
     position: "Project Manager",
-    image: "https://source.unsplash.com/random",
+    image: "img/headshot - henry.jpg",
   },
   {
     name: "Kelly Dai Chuy",
     position: "Pivot Coordinator",
-    image: "https://source.unsplash.com/random",
+    image: "img/headshot - kelly.jpg",
   },
   {
     name: "Gurbir Singh Deol",
     position: "Pivot Coordinator",
-    image: "https://source.unsplash.com/random",
+    image: "img/headshot - gurbir.jpg",
   },
   {
     name: "Emily Su",
     position: "Pivot Coordinator",
-    image: "https://source.unsplash.com/random",
+    image: "img/headshot - emily.jpg",
   },
   {
     name: "Tejas Gandesha",
     position: "Pivot Coordinator",
-    image: "https://source.unsplash.com/random",
+    image: "img/headshot - tejas.jpg",
   },
 ];

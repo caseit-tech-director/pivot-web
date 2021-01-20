@@ -23,6 +23,7 @@ $faq-component-breakpoint: $breakpoint-xl;
     @extend .link-reset;
 
     line-height: 1.248em;
+    margin-bottom: 0.5em;
   }
   &__toggle-label {
     font-family: "IBM Plex Sans";
