@@ -16,8 +16,11 @@ class team extends Component {
         <section className="full-width team-cta">
           <h2 className="h1 team-cta__heading">Team up and buckle up! </h2>
           <div className="team-cta__subheading">
-            Application is closing in {Math.floor(this.props.daysLeft)} Days! (
-            {`${this.props.date.getMonth() + 1}/${this.props.date.getDate()}`})
+            Application is closing in {Math.floor(this.props.timeLeftString)}! (
+            {`${
+              this.props.date.getMonth() + 1
+            }/${this.props.date.getDate()} night, 11:59pm`}
+            )
           </div>
           <ApplyButton />
           <a

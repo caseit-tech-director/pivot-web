@@ -2,11 +2,9 @@ import React from "react";
 import PropTypes from "prop-types";
 
 import "./hero.scss";
-import { Link } from "gatsby";
 import ApplyButton from "../ApplyButton";
 
-const hero = ({ pivotBeginDate, pivotEndDate, daysLeft }) => {
-  const daysLeftString = Math.floor(daysLeft);
+const hero = ({ pivotBeginDate, pivotEndDate, timeLeftString }) => {
   return (
     <header id="hero" className="full-width hero">
       {/* top bar */}
@@ -16,9 +14,7 @@ const hero = ({ pivotBeginDate, pivotEndDate, daysLeft }) => {
           alt="Pivot Logo"
           className="hero-cta__logo"
         />
-        <p className="hero-cta__cta-text label">
-          Closing in {daysLeftString} days!
-        </p>
+        <p className="hero-cta__cta-text label">Closing in {timeLeftString}!</p>
         <ApplyButton />
       </div>
       {/* center area */}

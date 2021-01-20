@@ -38,8 +38,30 @@ const calcDifferenceInDays = (earlierDate, laterDate) => {
 };
 
 const HomePage = () => {
-  const daysToAppsDeadline =
-    calcDifferenceInDays(new Date(), PIVOT_APPS_DEADLINE_DATE) + 1;
+  const daysToAppsDeadline = calcDifferenceInDays(
+    new Date(),
+    PIVOT_APPS_DEADLINE_DATE
+  );
+  const timeLeftString = (() => {
+    const daysLeft = Math.ceil(daysToAppsDeadline);
+
+    if (daysLeft === 1) {
+      const hoursLeft = Math.floor(
+        PIVOT_APPS_DEADLINE_DATE.getHours() - new Date().getHours()
+      );
+      if (hoursLeft <= 1) {
+        const minutesLeft = Math.floor(
+          PIVOT_APPS_DEADLINE_DATE.getMinutes() - new Date().getMinutes()
+        );
+        return minutesLeft + "minutes";
+      } else {
+        return hoursLeft + " hours";
+      }
+    } else {
+      return daysLeft + " days";
+    }
+  })();
+
   return (
     <>
       {/* meta data */}
@@ -57,6 +79,7 @@ const HomePage = () => {
           pivotBeginDate={PIVOT_BEGIN_DATE}
           pivotEndDate={PIVOT_END_DATE}
           daysLeft={daysToAppsDeadline}
+          timeLeftString={timeLeftString}
           deadline={PIVOT_APPS_DEADLINE_DATE}
         />
 
@@ -72,7 +95,7 @@ const HomePage = () => {
           </NavSectionMarker>
           <NavSectionMarker name="team">
             <TeamSection
-              daysLeft={daysToAppsDeadline}
+              timeLeftString={timeLeftString}
               date={PIVOT_APPS_DEADLINE_DATE}
             />
           </NavSectionMarker>
