@@ -29,7 +29,7 @@ class team extends Component {
               target="blank"
               className="team-cta__button button button--secondary"
             >
-              Find Team in Facebook
+              Find Team on Facebook
             </a>
           </div>
         </section>

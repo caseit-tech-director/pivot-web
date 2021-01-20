@@ -15,7 +15,7 @@ const hero = ({ pivotBeginDate, pivotEndDate, timeLeftString }) => {
           className="hero-cta__logo"
         />
         <p className="label hero-cta__cta-text">
-          Appliation closing in {timeLeftString}!
+          Application closing in {timeLeftString}!
         </p>
         <ApplyButton className="hero-cta__cta-button" />
       </div>

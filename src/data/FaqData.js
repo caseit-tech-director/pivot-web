@@ -36,7 +36,7 @@ export default [
           "Competitors are expected to comply with the 'Pivot' 2021 Rules'. Failure to abide by the rules may result in disqualifications.",
       },
       {
-        question: "How many teams will be competing",
+        question: "How many teams will be competing?",
         answer: "25 teams will be competing in the competition.",
       },
       {
@@ -53,7 +53,7 @@ export default [
     catagory: "Hubilo platform",
     content: [
       {
-        question: "What is Hubilo",
+        question: "What is Hubilo?",
         answer:
           "Hubilo platform which allows competitors to navigate through breakout rooms with ease and replicates a similar in-person Pivot experience.",
       },
