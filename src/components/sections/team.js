@@ -22,14 +22,16 @@ class team extends Component {
             }/${this.props.date.getDate()} night, 11:59pm`}
             )
           </div>
-          <ApplyButton />
-          <a
-            href="https://www.facebook.com/groups/2959308947727798"
-            target="blank"
-            className="team-cta__button button button--secondary"
-          >
-            Find my Team at Facebook
-          </a>
+          <div className="team-cta__controls">
+            <ApplyButton className="team-cta__button" />
+            <a
+              href="https://www.facebook.com/groups/2959308947727798"
+              target="blank"
+              className="team-cta__button button button--secondary"
+            >
+              Find Team in Facebook
+            </a>
+          </div>
         </section>
       </>
     );
