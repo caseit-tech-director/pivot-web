@@ -19,7 +19,7 @@ class why extends Component {
           <p className="main-grid__secondary-col">
             <strong>Work collaboratively</strong> to{" "}
             <strong>solve a real-life business problem</strong> and further your
-            understanding of the rapidly-growing BTM industry
+            understanding of the rapidly-growing BTM industry.
           </p>
           <img
             src="img/competition-challenge.jpg"
@@ -28,7 +28,7 @@ class why extends Component {
           />
           <div className="main-grid__middle-col">
             <p className="quote">
-              “I came back to pivot in 2020 mainly because I also competed in
+              “I came back to Pivot in 2020 mainly because I also competed in
               2019, and it was an amazing experience. I also was hoping to test
               out the BTM knowledge I had gained in my MIS concentration in the
               last term.”
@@ -40,7 +40,7 @@ class why extends Component {
               >
                 Lokesh Gupta
               </a>{" "}
-              - 2019 Pivot
+              - 2019 Pivot Competitor
             </div>
           </div>
         </div>
@@ -62,14 +62,14 @@ class why extends Component {
           <h3 className="main-grid__primary-col">Gain Insight</h3>
           <p className="main-grid__primary-col">
             Ask questions and learn from successful business professionals who
-            have been in your shoes
+            have been in your shoes.
           </p>
 
           <AlumniDisplay className="main-grid__full-col" />
           <p className="main-grid__secondary-col">
-            In our <strong>Interactive Firside Chat sessions</strong>, Panel of
-            SFU alumni from the MIS industry sharing their experiences and tips
-            for aspiring business professionals
+            In our interactive <strong>Firside Chat</strong>, a panel of SFU
+            alumni from the MIS industry share their experiences and provide
+            tips for aspiring business professionals.
           </p>
         </div>
 
@@ -77,7 +77,7 @@ class why extends Component {
         <div className="pivot-reason full-width">
           <h3>Recruitment Opportunities</h3>
           <p>
-            Opportunity to include your resume in the PIVOT Competitor Resume
+            Opportunity to include your resume in the Pivot Competitor Resume
             Book sent to corporate recruiters.
           </p>
         </div>

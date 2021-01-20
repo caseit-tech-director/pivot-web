@@ -67,7 +67,7 @@ const HomePage = () => {
       {/* meta data */}
       <Helmet>
         <meta charSet="utf-8" />
-        <title>Pivot BTM Case Competition</title>
+        <title>Pivot - BTM Case Competition</title>
         {/* <link rel="canonical" href="http://mysite.com/example" /> */}
       </Helmet>
 
