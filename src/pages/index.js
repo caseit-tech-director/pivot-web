@@ -45,7 +45,7 @@ const HomePage = () => {
   const timeLeftString = (() => {
     const daysLeft = Math.ceil(daysToAppsDeadline);
 
-    if (daysLeft === 1) {
+    if (daysLeft === 0) {
       const hoursLeft = Math.floor(
         PIVOT_APPS_DEADLINE_DATE.getHours() - new Date().getHours()
       );
