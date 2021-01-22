@@ -23,7 +23,7 @@ const PIVOT_DATES = {
   end: "2021-02-06",
 };
 
-const PIVOT_APPS_DEADLINE_DATE = new Date(`2021-01-22T11:59`);
+const PIVOT_APPS_DEADLINE_DATE = new Date(`2021-01-22T23:59`);
 const PIVOT_BEGIN_DATE = new Date(`${PIVOT_DATES.begin}T00:00`);
 const PIVOT_END_DATE = new Date(`${PIVOT_DATES.end}T00:00`);
 
@@ -45,7 +45,7 @@ const HomePage = () => {
   const timeLeftString = (() => {
     const daysLeft = Math.ceil(daysToAppsDeadline);
 
-    if (daysLeft === 0) {
+    if (Math.floor(daysToAppsDeadline) === 0) {
       const hoursLeft = Math.floor(
         PIVOT_APPS_DEADLINE_DATE.getHours() - new Date().getHours()
       );
@@ -55,9 +55,11 @@ const HomePage = () => {
         );
         return minutesLeft + "minutes";
       } else {
+        if (hoursLeft === 1) return "1 hour";
         return hoursLeft + " hours";
       }
     } else {
+      if (daysLeft === 1) return "1 day";
       return daysLeft + " days";
     }
   })();
