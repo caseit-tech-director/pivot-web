@@ -4,6 +4,8 @@ import PropTypes from "prop-types";
 import "./team.scss";
 import ApplyButton from "../ApplyButton";
 
+import { ApplicationDeadlineText } from "../ApplicationDeadlineText";
+
 class team extends Component {
   render() {
     return (
@@ -16,11 +18,7 @@ class team extends Component {
         <section className="full-width team-cta">
           <h2 className="h1 team-cta__heading">Team up and buckle up! </h2>
           <div className="team-cta__subheading">
-            Application is closing in {this.props.timeLeftString}! (
-            {`${
-              this.props.date.getMonth() + 1
-            }/${this.props.date.getDate()} night, 11:59pm`}
-            )
+            <ApplicationDeadlineText />
           </div>
           <div className="team-cta__controls">
             <ApplyButton className="team-cta__button" />

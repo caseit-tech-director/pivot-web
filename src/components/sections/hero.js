@@ -3,8 +3,9 @@ import PropTypes from "prop-types";
 
 import "./hero.scss";
 import ApplyButton from "../ApplyButton";
+import { ApplicationDeadlineText } from "../ApplicationDeadlineText";
 
-const hero = ({ pivotBeginDate, pivotEndDate, timeLeftString }) => {
+const hero = ({ pivotBeginDate, pivotEndDate }) => {
   return (
     <header id="hero" className="full-width hero">
       {/* top bar */}
@@ -15,7 +16,7 @@ const hero = ({ pivotBeginDate, pivotEndDate, timeLeftString }) => {
           className="hero-cta__logo"
         />
         <p className="label hero-cta__cta-text">
-          Application closing in {timeLeftString}!
+          <ApplicationDeadlineText />
         </p>
         <ApplyButton className="hero-cta__cta-button" />
       </div>
