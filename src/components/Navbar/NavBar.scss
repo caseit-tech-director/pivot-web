@@ -13,6 +13,7 @@
  *  
  *     +- .nav-bar
  *         +- nav-bar__item
+ *     +- .nav__cta
  */
 
 // max height of the nav bar
@@ -39,6 +40,23 @@ $nav-breakpoint-collapse: $breakpoint-m;
 
   // always on top
   z-index: 10000000;
+
+  // for the hide/show animation
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1); // ease out expo
+
+  // push the nav bar off the screen in the beginning for hiding it
+  // -100% for when the nav bar at top
+  // 100% for when the nav bar at bottom
+  transform: translateY(100%);
+  @include viewportLargerThan($nav-breakpoint-mobile) {
+    transform: translateY(-100%);
+  }
+}
+
+//IMPORTANT
+.nav-container--scrolled {
+  // animated back to original position when the bar is shown
+  transform: translateY(0);
 }
 
 /*
@@ -63,17 +81,6 @@ $nav-breakpoint-collapse: $breakpoint-m;
   display: flex;
   align-items: stretch;
   justify-content: stretch;
-
-  // for the hide/show animation
-  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1); // ease out expo
-
-  // push the nav bar off the screen in the beginning for hiding it
-  // -100% for when the nav bar at top
-  // 100% for when the nav bar at bottom
-  transform: translateY(100%);
-  @include viewportLargerThan($nav-breakpoint-mobile) {
-    transform: translateY(-100%);
-  }
 }
 
 .nav__logo {
@@ -90,12 +97,6 @@ $nav-breakpoint-collapse: $breakpoint-m;
   opacity: 0.8;
   display: flex;
   align-items: center; // vertically align the text
-}
-
-//IMPORTANT
-.nav--scrolled {
-  // animated back to original position when the bar is shown
-  transform: translateY(0);
 }
 
 /*

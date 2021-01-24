@@ -25,12 +25,6 @@ const NavBar = () => {
     }, 1000); // half a second timout tolerance
   }
 
-  // call begin auto scrolling right at the beginning
-  // for use cases where the user land on the page with a # location
-  // useEffect(() => {
-  //   beginAutoScrolling();
-  // }, []);
-
   useEffect(() => {
     if (typeof currentSection.id !== "string") return;
     if (currentSection.id !== "" && !isScrollingToSection) {
@@ -91,8 +85,12 @@ const NavBar = () => {
   }, []); // no update dependency, only run once
 
   return (
-    <div className="nav-container">
-      <nav className={scrolled ? "nav nav--scrolled" : "nav"}>
+    <div
+      className={
+        scrolled ? "nav-container nav-container--scrolled" : "nav-container"
+      }
+    >
+      <nav className="nav">
         {/* nav logo */}
 
         <img
@@ -100,12 +98,12 @@ const NavBar = () => {
           alt="Pivot Logo"
           className="nav__logo"
         />
-        {/* main nav bar */}
+        {/* main nav bar - contains nav links and scroll progress bar */}
         <div className="nav-bar">
           <motion.div
             style={{ scaleX: `${scrollProgress}` }}
             className="nav-bar__progress"
-          ></motion.div>
+          />
           {MenuItems.map(({ title, url }, index) => {
             // highlight the current section base on the hash on url
             const linkClassName = (() => {
