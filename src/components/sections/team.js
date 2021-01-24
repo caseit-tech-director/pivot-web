@@ -36,9 +36,4 @@ class team extends Component {
   }
 }
 
-team.propTypes = {
-  daysLeft: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-  date: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-};
-
 export default team;

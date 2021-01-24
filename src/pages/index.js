@@ -80,9 +80,6 @@ const HomePage = () => {
         <HeroSection
           pivotBeginDate={PIVOT_BEGIN_DATE}
           pivotEndDate={PIVOT_END_DATE}
-          daysLeft={daysToAppsDeadline}
-          timeLeftString={timeLeftString}
-          deadline={PIVOT_APPS_DEADLINE_DATE}
         />
 
         <main>
@@ -96,10 +93,7 @@ const HomePage = () => {
             <ScheduleSection />
           </NavSectionMarker>
           <NavSectionMarker name="team">
-            <TeamSection
-              timeLeftString={timeLeftString}
-              date={PIVOT_APPS_DEADLINE_DATE}
-            />
+            <TeamSection />
           </NavSectionMarker>
           <NavSectionMarker name="faq">
             <FaqSection />
