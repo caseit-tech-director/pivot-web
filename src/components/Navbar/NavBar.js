@@ -7,6 +7,8 @@ import { useSectionProgressData } from "./NavContext";
 import "./NavBar.scss";
 import ApplyButton from "../ApplyButton";
 
+import { isApplicationOver } from "../ApplicationDeadlineText";
+
 const SHOW_TRIGGER_Y = 700;
 
 const NavBar = () => {
@@ -131,7 +133,10 @@ const NavBar = () => {
           })}
         </div>
         {/* Apply button */}
-        <ApplyButton className="button--inverted nav__cta" />
+        <ApplyButton
+          className="button--inverted nav__cta"
+          disabled={isApplicationOver}
+        />
       </nav>
     </div>
   );

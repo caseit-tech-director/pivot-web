@@ -21,7 +21,7 @@ function isApplicationOver() {
   const now = new Date().getMilliseconds();
   const deadline = PIVOT_APPS_DEADLINE_DATE.getMilliseconds();
 
-  return new now() - deadline > 0;
+  return now - deadline > 0;
 }
 
 function useApplicationDeadlineText() {
@@ -97,6 +97,7 @@ function formatAMPM(date) {
 
 export {
   useApplicationDeadlineText,
+  ApplicationDeadlineTime,
   ApplicationDeadlineText,
   isApplicationOver,
 };

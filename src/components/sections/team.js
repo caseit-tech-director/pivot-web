@@ -4,7 +4,10 @@ import PropTypes from "prop-types";
 import "./team.scss";
 import ApplyButton from "../ApplyButton";
 
-import { ApplicationDeadlineText } from "../ApplicationDeadlineText";
+import {
+  ApplicationDeadlineText,
+  isApplicationOver,
+} from "../ApplicationDeadlineText";
 
 class team extends Component {
   render() {
@@ -21,11 +24,15 @@ class team extends Component {
             <ApplicationDeadlineText />
           </div>
           <div className="team-cta__controls">
-            <ApplyButton className="team-cta__button" />
+            <ApplyButton
+              className="team-cta__button"
+              disabled={isApplicationOver()}
+            />
             <a
               href="https://www.facebook.com/groups/2959308947727798"
               target="blank"
               className="team-cta__button button button--secondary"
+              style={{ visibility: isApplicationOver() ? "hidden" : "visible" }}
             >
               Find Team on Facebook
             </a>
