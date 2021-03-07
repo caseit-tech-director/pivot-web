@@ -18,9 +18,9 @@ function ApplicationDeadlineTime() {
 }
 
 function isApplicationOver() {
-  const now = new Date().getMilliseconds();
-  const deadline = PIVOT_APPS_DEADLINE_DATE.getMilliseconds();
-
+  const now = new Date().getTime();
+  const deadline = PIVOT_APPS_DEADLINE_DATE.getTime();
+  // alert(new Date());
   return now - deadline > 0;
 }
 

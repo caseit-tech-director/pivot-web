@@ -135,7 +135,7 @@ const NavBar = () => {
         {/* Apply button */}
         <ApplyButton
           className="button--inverted nav__cta"
-          disabled={isApplicationOver}
+          disabled={isApplicationOver()}
         />
       </nav>
     </div>
