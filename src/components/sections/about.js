@@ -16,7 +16,7 @@ class about extends Component {
               </a>
             </strong>
             , the world’s premier MIS business case competition.{" "}
-            <strong>Since 2017, PIVOT has welcomed over 300 competitors</strong>{" "}
+            <strong>Since 2018, PIVOT has welcomed over 400 competitors</strong>{" "}
             representing British Columbia’s various universities to compete in
             this rigorous and engaging competition.
           </p>

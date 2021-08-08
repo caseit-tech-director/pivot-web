@@ -30,7 +30,7 @@ const hero = ({ pivotBeginDate, pivotEndDate }) => {
       <h1 className="hero__heading">
         BC-based BTM Case Competition built for future business leaders
       </h1>
-      <div className="hero__label">1 week virtual event</div>
+      <div className="hero__label">1 weekend in person case competition</div>
       <div className="hero__date">
         {/* Javascript month starts from zero */}
         {`${pivotBeginDate.getMonth() + 1}/${pivotBeginDate.getDate()} - ${
