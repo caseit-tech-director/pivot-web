@@ -1,6 +1,8 @@
 import React, { useMemo } from "react";
 
 const PIVOT_APPS_DEADLINE_DATE = new Date(`2021-01-22T23:59`);
+const PIVOT_APPS_OPEN_DATE = new Date('1, 3');
+
 
 /*
  * Components versions of the dealine text
@@ -10,6 +12,10 @@ const PIVOT_APPS_DEADLINE_DATE = new Date(`2021-01-22T23:59`);
 function ApplicationDeadlineText() {
   const text = useApplicationDeadlineText();
   return <>{text}</>;
+}
+
+function ApplicationOpenText() {
+  return <>{formatMonthYear(PIVOT_APPS_OPEN_DATE)}</>;
 }
 
 // the closing date + time of the application
@@ -83,6 +89,13 @@ function formatDate(time) {
   return `${month}/${day} ${hourAndMinute}`;
 }
 
+
+function formatMonthYear(time) {
+  const month = time.getMonth() + 1; // javascript month starts from 0
+  const day = time.getDate();
+  return `Earlybird applications open on January 3rd`; //${month}/${day}`
+}
+
 function formatAMPM(date) {
   let hours = date.getHours();
   let minutes = date.getMinutes();
@@ -100,4 +113,5 @@ export {
   ApplicationDeadlineTime,
   ApplicationDeadlineText,
   isApplicationOver,
+  ApplicationOpenText
 };

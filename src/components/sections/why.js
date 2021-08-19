@@ -7,7 +7,7 @@ class why extends Component {
   render() {
     return (
       <section className="whyPivot">
-        <h2 className="centered-text">Why Pivot 2021</h2>
+        <h2 className="centered-text">Why Pivot 2022</h2>
         {/* Reason 1 */}
         <div className="pivot-reason main-grid full-width">
           <h3 className="main-grid__primary-col">Take on challenges</h3>
@@ -16,10 +16,17 @@ class why extends Component {
             compete against a pool of qualified teams.
           </p>
           <div className="main-grid__row-break"></div>
+          <h3 className="main-grid__secondary-col">Work collaboratively</h3>
           <p className="main-grid__secondary-col">
-            <strong>Work collaboratively</strong> to{" "}
-            <strong>solve a real-life business problem</strong> and further your
-            understanding of the rapidly-growing BTM industry.
+            <strong>Solve a real-life business problem</strong> {" "}
+            with your team and further your understanding of the
+            rapidly-growing BTM industry
+          </p>
+          <div className="main-grid__row-break"></div>
+          <h3 className="main-grid__primary-col">Fine-tune Your Skills</h3>
+          <p className="main-grid__primary-col">
+            With our {""}<strong>sponsored workshops</strong>, competitors will have the opportunity to learn
+            from industry professionals and refine their case competition skills.
           </p>
           <img
             src="img/competition-challenge.jpg"
@@ -92,24 +99,24 @@ class why extends Component {
           <h3 className="centered-text">Suprise! Cash prize!</h3>
           <p className="centered-text">
             In addition to presenting in front of a panel of industry
-            professionals, teams will be competing for a prize pool of{" "}
-            <strong>up to $2400.</strong>
+            professionals, Teams will be competing for a prize fund of{" "}
+            <strong>up to $1400.</strong>
           </p>
           <div className="cash-price-container">
             <div className="cash-price">
-              <div className="cash-price__value">$300</div>
+              <div className="cash-price__value">$200</div>
               <div className="cash-price__position">
                 1<sup>st</sup> place - per member
               </div>
             </div>
             <div className="cash-price">
-              <div className="cash-price__value">$200</div>
+              <div className="cash-price__value">$100</div>
               <div className="cash-price__position">
                 2<sup>nd</sup> place - per member
               </div>
             </div>
             <div className="cash-price">
-              <div className="cash-price__value">$100</div>
+              <div className="cash-price__value">$50</div>
               <div className="cash-price__position">
                 3<sup>rd</sup> place - per member
               </div>

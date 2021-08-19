@@ -5,8 +5,8 @@ import ScheduleEvents from "../../data/ScheduleEvents";
 import "./ScheduleTable.scss";
 
 const ScheduleTable = () => {
-  const day1Time = "1/30";
-  const day2Time = "2/6";
+  const day1Time = "2/12";
+  const day2Time = "2/13";
 
   return (
     <div className="schedule-table">
@@ -22,7 +22,7 @@ const ScheduleTable = () => {
         </div>
       </div>
 
-      <div className="schedule-table__week">One Week Deliberation Period</div>
+      {/* <div className="schedule-table__week">One Week Deliberation Period</div> */}
 
       <div className="schedule-table__day">
         <div className="schedule-table__date-info">

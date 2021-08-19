@@ -7,6 +7,7 @@ import ApplyButton from "../ApplyButton";
 import {
   ApplicationDeadlineText,
   isApplicationOver,
+  ApplicationOpenText
 } from "../ApplicationDeadlineText";
 
 class team extends Component {
@@ -21,7 +22,7 @@ class team extends Component {
         <section className="full-width team-cta">
           <h2 className="h1 team-cta__heading">Team up and buckle up! </h2>
           <div className="team-cta__subheading">
-            <ApplicationDeadlineText />
+            <ApplicationOpenText />
           </div>
           <div className="team-cta__controls">
             <ApplyButton

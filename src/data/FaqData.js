@@ -33,20 +33,20 @@ export default [
       {
         question: "Expectations of competitors",
         answer:
-          "Competitors are expected to comply with the 'Pivot' 2021 Rules'. Failure to abide by the rules may result in disqualifications.",
+          "Competitors are expected to comply with the 'Pivot' 2022 Rules'. Failure to abide by the rules may result in disqualifications.",
       },
       {
         question: "How many teams will be competing?",
         answer: "25 teams will be competing in the competition.",
       },
       {
-        question: "What are the types of awards I can win in Pivot 2021?",
-        answer: "Cash prize (only for top 3 finalists), Raffle, Best Speaker.",
+        question: "What are the types of awards I can win in Pivot 2022?",
+        answer: "Cash prize (only for top 3 finalist teams), raffle, and audience awards (including Best Speaker)",
       },
       {
-        question: "What virtual event platform is Pivot going to use?",
-        answer: "Hubilo",
-      },
+        question: "Where will Pivot competition weekend be hosted",
+        answer: "SFU Burnaby Campus",
+      }
     ],
   },
   {

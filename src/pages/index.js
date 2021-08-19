@@ -19,8 +19,8 @@ import { NavDataContext } from "../components/Navbar/NavContext";
 // Calculating the important dates of pivot
 const PIVOT_DATES = {
   appsDeadline: "2021-01-22",
-  begin: "2021-01-30",
-  end: "2021-02-06",
+  begin: "2021-02-12",
+  end: "2021-02-13",
 };
 
 const PIVOT_APPS_DEADLINE_DATE = new Date(`2021-01-22T23:59`);
@@ -70,6 +70,8 @@ const HomePage = () => {
       <Helmet>
         <meta charSet="utf-8" />
         <title>Pivot - BTM Case Competition</title>
+        <link rel="icon" type="image/svg+xml" href="../img/pivot-p-32x32.svg"/>
+
         {/* <link rel="canonical" href="http://mysite.com/example" /> */}
       </Helmet>
 
