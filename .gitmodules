@@ -1,0 +1,3 @@
+[submodule "gatsby-starter-netlify-cms"] 
+  path =  gatsby-starter-netlify-cms
+  url = https://github.com/netlify-templates/gatsby-starter-netlify-cms
