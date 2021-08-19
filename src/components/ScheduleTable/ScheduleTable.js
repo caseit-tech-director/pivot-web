@@ -10,7 +10,7 @@ const ScheduleTable = () => {
 
   return (
     <div className="schedule-table">
-      <div className="schedule-table__day">
+      {/* <div className="schedule-table__day">
         <div className="schedule-table__date-info">
           <div className="schedule-table__day-name">Day1</div>
           <div className="schedule-table__day-date">{day1Time}</div>
@@ -20,11 +20,11 @@ const ScheduleTable = () => {
             <EventItem name={val.name} time={val.time} key={index} />
           ))}
         </div>
-      </div>
+      </div> */}
 
-      {/* <div className="schedule-table__week">One Week Deliberation Period</div> */}
+      <div className="schedule-table__week">- Schedule Coming Soon -</div>
 
-      <div className="schedule-table__day">
+      {/* <div className="schedule-table__day">
         <div className="schedule-table__date-info">
           <div className="schedule-table__day-name">Day2</div>
           <div className="schedule-table__day-date">{day2Time}</div>
@@ -34,7 +34,7 @@ const ScheduleTable = () => {
             <EventItem name={val.name} time={val.time} key={index} />
           ))}
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };

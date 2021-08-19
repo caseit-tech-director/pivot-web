@@ -18,9 +18,9 @@ const hero = ({ pivotBeginDate, pivotEndDate }) => {
           alt="Pivot Logo"
           className="hero-cta__logo"
         />
-        <p className="label hero-cta__cta-text">
+        {/* <p className="label hero-cta__cta-text">
           <ApplicationDeadlineText />
-        </p>
+        </p> */}
         <ApplyButton
           className="hero-cta__cta-button"
           disabled={isApplicationOver()}
