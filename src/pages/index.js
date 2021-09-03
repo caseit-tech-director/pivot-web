@@ -70,6 +70,9 @@ const HomePage = () => {
       <Helmet>
         <meta charSet="utf-8" />
         <title>Pivot - BTM Case Competition</title>
+        <link rel="icon" type="image/x-icon" href="img/favicon.ico"/>
+
+        {/* <link rel="canonical" href="http://mysite.com/example" /> */}
       </Helmet>
 
       <NavDataContext>
