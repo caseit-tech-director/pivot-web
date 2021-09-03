@@ -74,7 +74,7 @@ class why extends Component {
 
           <AlumniDisplay className="main-grid__full-col" />
           <p className="main-grid__secondary-col">
-            In our interactive <strong>Firside Chat</strong>, a panel of SFU
+            In our interactive <strong>Fireside Chat</strong>, a panel of SFU
             alumni from the MIS industry share their experiences and provide
             tips for aspiring business professionals.
           </p>

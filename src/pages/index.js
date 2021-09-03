@@ -70,7 +70,7 @@ const HomePage = () => {
       <Helmet>
         <meta charSet="utf-8" />
         <title>Pivot - BTM Case Competition</title>
-        <link rel="icon" type="image/svg+xml" href="../img/pivot-p-32x32.svg"/>
+        {/* <link rel="icon" type="image/svg+xml" href="../img/pivot-p-32x32.svg"/> */}
 
         {/* <link rel="canonical" href="http://mysite.com/example" /> */}
       </Helmet>
